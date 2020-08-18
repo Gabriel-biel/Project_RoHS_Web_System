@@ -1,8 +1,11 @@
 const express = require('express')
+const routes = require('./routes')
 
 const app = express()
 
 app.use(express.json())
+
+app.use(routes)
 
 /**
  * Métodos HTTP:
@@ -20,9 +23,5 @@ app.use(express.json())
   * Ruote Params: Parametros utilizados para identificar recursos (/users/:id) -> const params = request.params
   * Request Body: Corpo da requisicao utilizado para criar ou alterar recursos -> request.body
   */
-
-app.get('/users', (request, response) => {
-  return response.json({ text: 'Hello World'})
-})
 
 app.listen(3333)

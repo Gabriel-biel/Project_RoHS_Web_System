@@ -1,35 +1,15 @@
 const express = require('express')
-const crypto = require('crypto')
 
-const connection = require('./database/connection')
+const ClientController = require('./controllers/ClientController')
+const ContactController = require('./controllers/ContactController')
 
 const routes = express.Router()
 
-routes.get('/clients', async (request, response) => {
-  const clients = await connection('clients').select('*')
+routes.get('/clients', ClientController.index)
+routes.post('/clients', ClientController.create)
 
-  return response.json(clients)
-})
-
-routes.post('/clients', async (request, response) => {
-  const {
-    password,
-    name,
-    phone,
-    email
-  } = request.body
-
-  const id = crypto.randomBytes(4).toString('HEX')
-
-  await connection('clients').insert({
-    id,
-    password,
-    name,
-    phone,
-    email
-  })
-
-  return response.json({ id })
-})
+routes.get('/contacts', ContactController.index)
+routes.post('/contacts', ContactController.create)
+routes.delete('/contacts/:id', ContactController.delete)
 
 module.exports = routes

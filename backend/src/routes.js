@@ -3,6 +3,7 @@ const express = require('express')
 const ClientController = require('./controllers/ClientController')
 const ContactController = require('./controllers/ContactController')
 const ProviderController = require('./controllers/ProviderController')
+const CompanyController = require('./controllers/CompanyController')
 
 const routes = express.Router()
 
@@ -15,5 +16,8 @@ routes.delete('/contacts/:id', ContactController.delete)
 
 routes.post('/providers', ProviderController.create)
 routes.get('/providers', ProviderController.index)
+
+routes.post('/companies', CompanyController.create)
+routes.get('/companies', CompanyController.index)
 
 module.exports = routes

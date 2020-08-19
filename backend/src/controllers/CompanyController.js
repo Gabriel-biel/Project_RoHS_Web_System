@@ -34,19 +34,19 @@ module.exports = {
 
   async delete(request, response) {
     const { id } = request.params
-    const client_id = request.headers.authorization
+    const provider_id = request.headers.authorization
 
-    const contact = await connection('contacts')
+    const company = await connection('companies')
       .where('id', id)
-      .select('client_id')
+      .select('provider_id')
       .first()
 
 
-    if (contact.client_id !== client_id) {
+    if (company.provider_id !== provider_id) {
       return response.status(401).json({ error: 'Operation not permitted' })
     }
 
-    await connection('contacts').where('id', id).delete()
+    await connection('companies').where('id', id).delete()
 
     return response.status(204).send()
   }

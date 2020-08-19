@@ -19,5 +19,6 @@ routes.get('/providers', ProviderController.index)
 
 routes.post('/companies', CompanyController.create)
 routes.get('/companies', CompanyController.index)
+routes.delete('/companies/:id', CompanyController.delete)
 
 module.exports = routes

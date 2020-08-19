@@ -3,9 +3,10 @@
     max-width: 1120px;
     height: 100vh;
     margin: 0 auto;
+    margin-left: 2rem;
 
-    display: flex;
-    align-items: center;
+    flex-direction: left;
+    align-items: center; /*Manter o intens da tela alinhados a esquerda*/
     justify-content: center;
 }
 
@@ -15,24 +16,46 @@
     margin-right: 30px;
 }
 
-.login-container section.form a {
-    
+
+.login-container section.form > a img{
+    max-width: 15rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+.login-container section.form > img{
+    width: 91rem;
+    height: 24rem;
+    margin-left: 0;
 }
 
 .login-container section.form form {
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
-.login-container section.form form h1 {
+.login-container section.form form legend {
     font-size: 32px;
     margin-bottom: 32px;
 }
 
+.login-container section.form form div.inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 0 !important;
+    width: 90rem;
+}
 
+.login-container section.form form div .button{
+    margin-bottom: 1.5rem;
+}
 .login-container section.form form a {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
     color: #ffa500;
     text-decoration: none;
     font-weight: 500;

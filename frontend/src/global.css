@@ -27,7 +27,8 @@ form input {
     color: #3333;
     border: 1px solid #dcdce6;
     border-radius: 8px;
-    padding: 0 24px
+    padding: 0 24px;
+    margin-top: 10px;
 }
 
 .button {
@@ -44,4 +45,9 @@ form input {
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    filter: brightness(80%)
 }

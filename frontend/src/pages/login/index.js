@@ -11,7 +11,7 @@ export default function Login() {
         <>
             <div className="login-container">
 
-                <selection className="form">
+                <section className="form">
                     <a>
                         <img src={logo} alt="Salcomp" />
                     </a>
@@ -31,7 +31,7 @@ export default function Login() {
                             Entrar em contato
                         </footer>
                     </form>
-                </selection>
+                </section>
                 <img src={preencher} alt="Imagem" />
             </div>
         </>

@@ -4,8 +4,11 @@ const ClientController = require('./controllers/ClientController')
 const ContactController = require('./controllers/ContactController')
 const ProviderController = require('./controllers/ProviderController')
 const CompanyController = require('./controllers/CompanyController')
+const ProfileController = require('./controllers/ProfileController')
 
 const routes = express.Router()
+
+routes.get('/profile', ProfileController.index)
 
 routes.get('/clients', ClientController.index)
 routes.post('/clients', ClientController.create)

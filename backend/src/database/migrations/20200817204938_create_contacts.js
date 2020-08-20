@@ -3,7 +3,7 @@ exports.up = function(knex) {
     table.increments()
 
     table.string('department').notNullable()
-    table.string('name').notNullable()
+    table.string('contact_name').notNullable()
     table.string('phone').notNullable()
     table.string('email').notNullable()
 

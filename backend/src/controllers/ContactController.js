@@ -2,18 +2,23 @@ const connection = require('../database/connection')
 
 module.exports = {
   async index(request, response) {
-    const contacts = await connection('contacts').select('*')
+    const contacts = await connection('contacts')
+      .join('clients', 'clients.id', '=', 'contacts.client_id')
+      .select([
+        'contacts.*',
+        'clients.name',
+      ])
 
     return response.json(contacts)
   },
 
   async create(request, response) {
-    const { department, name, phone, email } = request.body
+    const { department, contact_name, phone, email } = request.body
     const client_id = request.headers.authorization
 
     const [id] = await connection('contacts').insert({
       department,
-      name,
+      contact_name,
       phone,
       email,
       client_id

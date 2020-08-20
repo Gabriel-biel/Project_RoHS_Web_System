@@ -1,4 +1,5 @@
 const crypto = require('crypto')
+const bcrypt = require('bcryptjs')
 const connection = require('../database/connection')
 
 module.exports = {
@@ -14,10 +15,13 @@ module.exports = {
     const client_id = request.headers.authorization
   
     const id = crypto.randomBytes(4).toString('HEX')
+
+    const salt = bcrypt.genSaltSync(10);
+    const hash = bcrypt.hashSync(password, salt);
   
     await connection('providers').insert({
       id,
-      password,
+      password: hash,
       client_id
     })
     return response.json({ id })

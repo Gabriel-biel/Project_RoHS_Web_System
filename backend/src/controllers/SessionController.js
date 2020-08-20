@@ -1,4 +1,5 @@
 const connection = require('../database/connection')
+const bcrypt = require('bcryptjs')
 
 module.exports = {
   async create(request, response) {
@@ -6,12 +7,17 @@ module.exports = {
 
     const provider = await connection('providers')
       .where('id', id)
-      .where('password', password)
-      .select('id')
+      .select('*')
       .first()
 
     if (!provider) {
-      return response.status(400).json({ error: 'No PROVIDER found with this ID or Incorrect Password'})
+      return response.status(400).json({ error: 'No PROVIDER found with this ID'})
+    }
+
+    console.log(password, provider.password)
+
+    if (!await bcrypt.compare(password, provider.password)) {
+      return response.status(400).json({ error: 'Invalid password'})
     }
 
     return response.json(provider)

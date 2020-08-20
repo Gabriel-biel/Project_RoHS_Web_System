@@ -22,6 +22,7 @@ routes.delete('/contacts/:id', ContactController.delete)
 
 routes.post('/providers', ProviderController.create)
 routes.get('/providers', ProviderController.index)
+routes.delete('/providers/:id', ProviderController.delete)
 
 routes.post('/companies', CompanyController.create)
 routes.get('/companies', CompanyController.index)

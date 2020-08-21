@@ -15,15 +15,15 @@ routes.post('/sessions', SessionController.create)
 
 routes.get('/profile', authMiddleware, ProfileController.index)
 
-routes.get('/clients', authMiddleware, ClientController.index)
+routes.get('/clients', ClientController.index)
 routes.post('/clients', authMiddleware, ClientController.create)
 
 routes.get('/contacts', ContactController.index)
-routes.post('/contacts', authMiddleware, ContactController.create)
+routes.post('/contacts', ContactController.create)
 routes.delete('/contacts/:id', authMiddleware, ContactController.delete)
 
 routes.post('/providers', authMiddleware, ProviderController.create)
-routes.get('/providers', authMiddleware, ProviderController.index)
+routes.get('/providers', ProviderController.index)
 routes.delete('/providers/:id', authMiddleware, ProviderController.delete)
 
 routes.post('/companies', authMiddleware, CompanyController.create)

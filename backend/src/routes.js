@@ -1,11 +1,16 @@
 const express = require('express')
 
 const ClientController = require('./controllers/ClientController')
+const ClientProfileController = require('./controllers/ClientProfileController')
 const ContactController = require('./controllers/ContactController')
 const ProviderController = require('./controllers/ProviderController')
 const CompanyController = require('./controllers/CompanyController')
 const ProfileController = require('./controllers/ProfileController')
 const SessionController = require('./controllers/SessionController')
+<<<<<<< Updated upstream
+=======
+const LoginController = require('./controllers/LoginController')
+>>>>>>> Stashed changes
 
 const authMiddleware = require('./middlewares/auth')
 
@@ -13,10 +18,22 @@ const routes = express.Router()
 
 routes.post('/sessions', SessionController.create)
 
+<<<<<<< Updated upstream
 routes.get('/profile', authMiddleware, ProfileController.index)
 
 routes.get('/clients', ClientController.index)
 routes.post('/clients', authMiddleware, ClientController.create)
+=======
+routes.post('/login', LoginController.create)
+
+routes.get('/profile', authMiddleware, ProfileController.index)
+
+routes.get('/clients', ClientController.index)
+routes.post('/clients', ClientController.create)
+routes.delete('/clients/:id', ClientController.delete)
+
+routes.get('/profile-client', authMiddleware, ClientProfileController.index)
+>>>>>>> Stashed changes
 
 routes.get('/contacts', ContactController.index)
 routes.post('/contacts', ContactController.create)

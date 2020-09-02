@@ -1,0 +1,96 @@
+.page-header {
+  width: 100%;
+  height: 6rem;/*valor anterior 10*/
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.page-header section.logo-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header section.logo-content a {
+  cursor: pointer;
+}
+
+.page-header section.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.page-header section.menu ul li.li {
+  width: 90px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header section.menu ul li.li:hover{
+  background: #ffa500;
+}
+
+.page-header section.menu ul li a {
+  text-decoration: none;
+  color: #c4242c;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.page-header section.menu ul li.provider {
+  width: 90px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  transition: 0.3s;
+}
+
+.page-header section.menu ul li.provider:hover{
+  background: #ffa500;
+}
+
+.page-header section.menu ul li.provider a {
+  color: #fff;
+}
+
+.page-header section.menu ul li.user {
+  width: 90px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  transition: 0.3s
+}
+.page-header section.menu ul li.user:hover{
+  background: #ffa500;
+}
+
+.page-header section.menu ul li.user a {
+  color: #fff;
+}
+
+.page-header section.menu ul li.contacts {
+  width: 90px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  transition: 0.3s;
+}
+.page-header section.menu ul li.contacts:hover{
+  background: #ffa500;
+}
+
+.page-header section.menu ul li.contacts a {
+  color: #fff;
+}

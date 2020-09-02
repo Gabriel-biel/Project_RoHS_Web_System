@@ -1,0 +1,55 @@
+.contacts-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-container {
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-container h1 {
+  width: 100%;
+  font-size: 35px;
+  text-align: center;
+  margin: 34px auto;
+}
+
+.contacts-container ul.box {
+  display: block;
+  width: 100%;
+}
+
+.contacts-container ul li {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-container ul li table td {
+  width: 300px;
+  height: 50px;
+}
+
+.contacts-container ul li table td.title {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.contacts-container ul li table tr.values > td {
+  background: #ccc;
+  font-size: 16px;
+  padding: 12px;
+}

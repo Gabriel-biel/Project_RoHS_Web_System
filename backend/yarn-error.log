@@ -1,0 +1,47 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add jsonwebtoken
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\Vinnie\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Vinnie\AppData\Local\Programs\Python\Python38-32\;C:\Users\Vinnie\AppData\Local\Microsoft\WindowsApps;%ANDROID_HOME%\tools;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3.4\bin;C:\Users\Vinnie\AppData\Roaming\npm;C:\Users\Vinnie\AppData\Local\Yarn\bin;C:\Users\Vinnie\AppData\Local\GitHubDesktop\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.18.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Vinnie\Desktop\Vinnie\Unip\p008\APS\Project_RoHS_Web_System\backend\node_modules\sqlite3\lib\binding\napi-v3-win32-x64\node_sqlite3.node'
+
+npm manifest: 
+  {
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon src/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "cors": "^2.8.5",
+      "express": "^4.17.1",
+      "knex": "^0.21.5",
+      "sqlite3": "^5.0.0"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -7,6 +7,7 @@ import ClientProfile from './pages/ClientProfile'
 import Contacts from './pages/Contacts'
 import dataManagement from './pages/DataManagement'
 import ClientData from './pages/ClientData'
+import Dashboard from './pages/Dashboard'
 
 export default function Routes() {
   return (
@@ -18,6 +19,7 @@ export default function Routes() {
         <Route path='/profile-client' component={ClientProfile} />
         <Route path='/management' component={dataManagement} />
         <Route path='/client-data' component={ClientData} />
+        <Route path='/dashboard' component={Dashboard} />
       </Switch>
     </BrowserRouter>
   )

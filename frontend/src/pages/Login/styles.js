@@ -43,6 +43,7 @@ export const Label = styled.label`
 `
 
 export const InputEmail = styled.input`
+  color: #3b3b3b;
   ::placeholder {
     color: #dbdbdb;
   }
@@ -56,6 +57,7 @@ export const InputPassword = styled.input`
   }
 
   margin-top: 6px;
+  color: #3b3b3b;
 `
 
 export const ButtonSubmit = styled.button`
@@ -65,6 +67,12 @@ export const ButtonSubmit = styled.button`
   border: 0;
   background: #92d050;
   margin-top: 30px;
+
+  transition: opacity .3s;
+
+  :hover {
+    opacity: 80%;
+  }
 `
 
 export const TextButton = styled.text`
@@ -88,7 +96,9 @@ export const WorldImageContainer = styled.div`
   justify-content: center;
 `
 
-export const Footer = styled.div``
+export const Footer = styled.div`
+  text-align: center;
+`
 
 export const FooterText = styled.text`
   color: #c4160a;

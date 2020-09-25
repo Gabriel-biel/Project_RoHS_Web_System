@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 import logoRohs from '../../assets/rohs.png'
 import world from '../../assets/world.png'
@@ -23,6 +24,15 @@ import {
 } from './styles'
 
 function Login() {
+
+  const history = useHistory()
+
+  function handleSubmit(e) {
+    e.preventDefault()
+
+    history.push('dashboard')
+  }
+
   return (
     <Wrapper>
       <LoginContainer>
@@ -31,7 +41,7 @@ function Login() {
         </LogoContainer>
         <FormContainer>
           <LoginText>Faça seu login</LoginText>
-          <Form>
+          <Form onSubmit={(e) => handleSubmit(e)}>
             <InputContainer>  
               <Label>
                 ID
@@ -42,17 +52,18 @@ function Login() {
             <InputContainer> 
               <Label>
                 Senha
-                <InputPassword placeholder="Senha" />
+                <InputPassword placeholder="Senha" type="password" />
               </Label>
             </InputContainer>
-            <ButtonSubmit>
+            <ButtonSubmit type="submit">
               <TextButton>Entrar</TextButton>
             </ButtonSubmit>
           </Form>
         </FormContainer>
       <Footer>
         <FooterText>
-          All directs reserved by Salcomp @2020
+          All directs reserved by Salcomp @2020 <br />
+          Developed with love by Vinnie ❤
         </FooterText>
       </Footer>
       </LoginContainer>

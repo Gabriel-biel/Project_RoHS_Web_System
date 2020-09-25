@@ -1,37 +1,51 @@
 import React from 'react'
 
-import './styles.css'
-
-import PageHeader from '../../components/PageHeader';
+import {
+  Wrapper,
+  LoginContainer,
+  FormContainer,
+  LoginText,
+  Form,
+  InputContainer,
+  Label,
+  InputEmail,
+  InputPassword,
+  ButtonSubmit,
+  TextButton,
+  ImageContainer
+} from './styles'
 
 function Login() {
   return (
-    <div className="login-screen">
-      <PageHeader
-        provider="provider"
-        user="li"
-        contacts="li"
-      />
+    <Wrapper>
+      <LoginContainer>
+        <FormContainer>
+          <LoginText>Faça seu login</LoginText>
+          <Form>
+            <InputContainer>  
+              <Label>
+                Email
+                <InputEmail placeholder="E-mail" />
+              </Label>
+            </InputContainer>
 
-      <h1>Faça seu login</h1>
-      
-      <div className="img-fundo">
+            <InputContainer> 
+              <Label>
+                Senha
+                <InputPassword placeholder="Senha" />
+              </Label>
+            </InputContainer>
+            <ButtonSubmit>
+              <TextButton>Entrar</TextButton>
+            </ButtonSubmit>
+          </Form>
+        </FormContainer>
+      </LoginContainer>
 
-        <div className="login-container">
-          <section className="form">
-            <form>
-
-              <div className="box">
-                <input placeholder="Sua ID" />
-                <input type="password" placeholder="Sua senha" />
-                <button className="button" type="submit">Entrar</button>
-              </div>
-            </form>
-          </section>
-        </div>
-
-      </div>
-    </div>
+      <ImageContainer>
+        RightSide
+      </ImageContainer>
+    </Wrapper>
   )
 }
 

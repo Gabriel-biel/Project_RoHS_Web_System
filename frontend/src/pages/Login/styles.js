@@ -11,9 +11,12 @@ export const LoginContainer = styled.div`
   background: #fff;
   padding: 13px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `
+
+export const LogoContainer = styled.div``
 
 export const FormContainer = styled.div`
   background: #fff;
@@ -73,5 +76,21 @@ export const TextButton = styled.text`
 
 export const ImageContainer = styled.div`
   width: 60%;
-  background: #92d050;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const WorldImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const Footer = styled.div``
+
+export const FooterText = styled.text`
+  color: #c4160a;
+  font-weight: 400;
 `

@@ -1,8 +1,12 @@
 import React from 'react'
 
+import logoRohs from '../../assets/rohs.png'
+import world from '../../assets/world.png'
+
 import {
   Wrapper,
   LoginContainer,
+  LogoContainer,
   FormContainer,
   LoginText,
   Form,
@@ -12,20 +16,26 @@ import {
   InputPassword,
   ButtonSubmit,
   TextButton,
-  ImageContainer
+  ImageContainer,
+  WorldImageContainer,
+  Footer,
+  FooterText
 } from './styles'
 
 function Login() {
   return (
     <Wrapper>
       <LoginContainer>
+        <LogoContainer>
+          <img src={logoRohs} alt="Logo Rohs"/>
+        </LogoContainer>
         <FormContainer>
           <LoginText>Faça seu login</LoginText>
           <Form>
             <InputContainer>  
               <Label>
-                Email
-                <InputEmail placeholder="E-mail" />
+                ID
+                <InputEmail placeholder="Sua ID" />
               </Label>
             </InputContainer>
 
@@ -40,10 +50,17 @@ function Login() {
             </ButtonSubmit>
           </Form>
         </FormContainer>
+      <Footer>
+        <FooterText>
+          All directs reserved by Salcomp @2020
+        </FooterText>
+      </Footer>
       </LoginContainer>
 
       <ImageContainer>
-        RightSide
+        <WorldImageContainer>
+          <img src={world} alt="World Image" style={{ width: '80%'}}/>
+        </WorldImageContainer>
       </ImageContainer>
     </Wrapper>
   )

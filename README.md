@@ -1,10 +1,10 @@
 # Rohs
 Repositório de desenvolvimento para a aplicação RoHS!
 
-<strong>Screen-Login</strong>
+<strong> Screen-Login </strong>
 ![Rohs 2 0](https://user-images.githubusercontent.com/61027045/94240926-59c35f80-feea-11ea-8d71-4ade988ac8a1.png)
 </br>
-<strong>Screen-Infomations-basics</strong>]
+<strong> Screen-Infomations-basics </strong>
 ![Rohs-info](https://user-images.githubusercontent.com/61027045/94349241-19aeca80-0019-11eb-924c-49ca48d55b8b.png)
 </br>
 <strong>Screen-Contacts</strong>

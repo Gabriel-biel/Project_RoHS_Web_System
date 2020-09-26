@@ -23,11 +23,11 @@ Repositório de desenvolvimento para a aplicação RoHS!
 </br>
 
 Para executar o projeto em sua maquina, e preciso que você tenha o yarn (https://yarnpkg.com/) instalado.</br>
-#####[ 1 ]##### Faça o clone do projeto https://github.com/Gabriel-biel/Project_RoHS_Web_Systemna sua maquina.</br>
-#####[ 2 ]##### Abra o projeto atravez do Visual Studio Code.</br>
-#####[ 3 ]##### Presione  ctrl + '  para abrir o terminal dentro do VSCode</br>
-#####[ 4 ]##### Digite os seguintes comandos: yarn install</br>
+##### [ 1 ] ##### Faça o clone do projeto https://github.com/Gabriel-biel/Project_RoHS_Web_Systemna sua maquina.</br>
+##### [ 2 ] ##### Abra o projeto atravez do Visual Studio Code.</br>
+##### [ 3 ] ##### Presione  ctrl + '  para abrir o terminal dentro do VSCode</br>
+##### [ 4 ] ##### Digite os seguintes comandos: yarn install</br>
 Esse comando acima irá instalar as depedências necessarias para que seja possível iniciar o projeto.</br>
 Após todas as dependências terem sido instaladas.</br>
-#####[ 5 ]##### Rode o comando: yarn start</br>
+##### [ 5 ] ##### Rode o comando: yarn start</br>
 Isso irá iniciar o projeto em sua maquina, irá ser aberto uma nova guia em seu navegar com o frontend do projeto.</br>

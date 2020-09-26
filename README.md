@@ -1,7 +1,6 @@
 # Rohs
-Repositório de desenvolvimento para a aplicação RoHS
-![Rohs](https://user-images.githubusercontent.com/61027045/91388074-fb349400-e80c-11ea-973d-df110cfe4f2e.png)
-
+Repositório de desenvolvimento para a aplicação RoHS!
+![Rohs 2 0](https://user-images.githubusercontent.com/61027045/94240926-59c35f80-feea-11ea-8d71-4ade988ac8a1.png)
 
 Para executar o projeto em sua maquina, tenha o yarn (https://yarnpkg.com/) instalado em sua maquina.</br>
 Faça o clone do projeto na sua maquina.</br>

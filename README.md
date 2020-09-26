@@ -16,7 +16,7 @@ Repositório de desenvolvimento para a aplicação RoHS!
 <strong>Screen-Docs-Managments</strong>
 ![Management](https://user-images.githubusercontent.com/61027045/94349305-98a40300-0019-11eb-8876-ae31b4937970.png)
 </br>
-<strong size=18px>Screen-Upload-Docs</strong>
+<strong size="18px">Screen-Upload-Docs</strong>
 ![Rohs-Management-uploads](https://user-images.githubusercontent.com/61027045/94349315-c0936680-0019-11eb-9312-8ba50fcb0c38.png)
 </br>
 

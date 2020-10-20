@@ -26,7 +26,7 @@ const SignIn: React.FC = () => {
 
       history.push('/dashboard')
     },
-    [id, password]
+    [id, password, history]
   )
 
   return (

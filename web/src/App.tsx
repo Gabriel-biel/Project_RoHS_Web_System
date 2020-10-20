@@ -1,12 +1,12 @@
 import React from 'react'
 
-import SignIn from './pages/SignIn'
+import Dashboard from './pages/Dashboard'
 import GlobalStyle from './styles/global'
 
 const App: React.FC = () => {
   return (
     <>
-      <SignIn />
+      <Dashboard />
       <GlobalStyle />
     </>
   )

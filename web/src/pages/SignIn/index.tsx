@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FormEvent, useCallback, useState } from 'react'
 
 import logoRohs from '../../assets/rohs.png'
 import worldImg from '../../assets/world.png'
@@ -12,19 +12,42 @@ import {
 } from './styles'
 
 const SignIn: React.FC = () => {
+  const [id, setId] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
+
+  const handleSubmit = useCallback(
+    (event: FormEvent) => {
+      event.preventDefault()
+
+      console.log({ id, password })
+    },
+    [id, password]
+  )
+
   return (
     <Container>
       <LoginContainer>
         <img src={logoRohs} alt="Rohs" />
 
-        <FormContainer>
+        <FormContainer onSubmit={handleSubmit}>
           <h1>Faça seu login</h1>
 
           <label>ID</label>
-          <input />
+          <input
+            placeholder="Informe sua ID"
+            value={id}
+            onChange={e => {
+              setId(e.target.value)
+            }}
+          />
 
           <label>Senha</label>
-          <input type="password" />
+          <input
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            placeholder="Informe sua senha"
+            type="password"
+          />
 
           <button type="submit">Entrar</button>
         </FormContainer>

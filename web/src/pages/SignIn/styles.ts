@@ -19,9 +19,11 @@ export const LoginContainer = styled.div`
   }
 `
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   min-width: 400px;
   h1 {
+    color: #505152;
+    font-weight: 600;
     display: block;
     margin: 20px 0;
   }
@@ -29,6 +31,7 @@ export const FormContainer = styled.div`
   label {
     display: block;
     margin-bottom: 8px;
+    color: #92d550;
   }
 
   input {

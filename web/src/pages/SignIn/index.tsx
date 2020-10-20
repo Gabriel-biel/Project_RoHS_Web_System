@@ -1,4 +1,5 @@
 import React, { FormEvent, useCallback, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import logoRohs from '../../assets/rohs.png'
 import worldImg from '../../assets/world.png'
@@ -15,11 +16,15 @@ const SignIn: React.FC = () => {
   const [id, setId] = useState<string>('')
   const [password, setPassword] = useState<string>('')
 
+  const history = useHistory()
+
   const handleSubmit = useCallback(
     (event: FormEvent) => {
       event.preventDefault()
 
       console.log({ id, password })
+
+      history.push('/dashboard')
     },
     [id, password]
   )

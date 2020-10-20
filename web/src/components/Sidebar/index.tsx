@@ -2,7 +2,7 @@ import React from 'react'
 
 import logo from '../../assets/logo.png'
 
-import { Container, Link } from './styles'
+import { Container, LinkSideBar } from './styles'
 
 interface ISidebarProps {
   page: 'ic' | 'gd' | 'gp'
@@ -13,15 +13,15 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }: ISidebarProps) => {
     <Container>
       <img src={logo} alt="Salcomp" />
 
-      <Link isActive={page === 'ic'} href="#">
+      <LinkSideBar isActive={page === 'ic'} to="/dashboard">
         Informações da companhia
-      </Link>
-      <Link isActive={page === 'gd'} href="#">
+      </LinkSideBar>
+      <LinkSideBar isActive={page === 'gd'} to="/documents">
         Gerenciamento de documentos
-      </Link>
-      <Link isActive={page === 'gp'} href="#">
+      </LinkSideBar>
+      <LinkSideBar isActive={page === 'gp'} to="/parts">
         Gerenciamento de partes
-      </Link>
+      </LinkSideBar>
     </Container>
   )
 }

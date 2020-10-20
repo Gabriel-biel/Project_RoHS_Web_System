@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 interface ILinkProps {
   isActive: boolean
@@ -19,7 +20,7 @@ export const Container = styled.div`
   }
 `
 
-export const Link = styled.a<ILinkProps>`
+export const LinkSideBar = styled(Link)<ILinkProps>`
   width: 100%;
   height: 40px;
   margin-bottom: 2px;

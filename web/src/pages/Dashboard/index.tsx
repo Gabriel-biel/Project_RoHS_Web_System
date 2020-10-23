@@ -3,6 +3,8 @@ import { MdContacts } from 'react-icons/md'
 import { useHistory } from 'react-router-dom'
 import { FiAlertCircle, FiMapPin } from 'react-icons/fi'
 
+import { Link } from 'react-router-dom'
+
 import salcompLogo from '../../assets/salcomp-logo.jpg'
 
 import Sidebar from '../../components/Sidebar'
@@ -28,53 +30,21 @@ const Dashboard = () => {
         </ImageContainer>
 
         <ListSquare>
-          <Square onClick={() => history.push('contacts')}>
-            <MdContacts size={60} color="#b8b8f2" />
-            <span>Contatos</span>
-            <p>Veja sua lista de contatos</p>
-          </Square>
+          <Link to="/contacts">
+            <Square onClick={() => history.push('contacts')}>
+              <MdContacts size={60} color="#b8b8f2" />
+              <span>Contatos</span>
+              <p>Veja sua lista de contatos</p>
+            </Square>
+          </Link>
 
-          <Square>
-            <FiAlertCircle size={60} color="#b8b8f2" />
-            <span>Informações da companhia</span>
-            <p>Visualize informações da companhia</p>
-          </Square>
-
-          <Square>
-            <FiMapPin size={60} color="#b8b8f2" />
-            <span>Localização</span>
-            <p>Veja as melhores rotas</p>
-          </Square>
-
-          <Square>
-            <MdContacts size={60} color="#b8b8f2" />
-            <span>Contatos</span>
-            <p>Veja sua lista de contatos</p>
-          </Square>
-
-          <Square>
-            <FiAlertCircle size={60} color="#b8b8f2" />
-            <span>Informações da companhia</span>
-            <p>Visualize informações da companhia</p>
-          </Square>
-
-          <Square>
-            <FiMapPin size={60} color="#b8b8f2" />
-            <span>Localização</span>
-            <p>Veja as melhores rotas</p>
-          </Square>
-
-          <Square>
-            <MdContacts size={60} color="#b8b8f2" />
-            <span>Contatos</span>
-            <p>Veja sua lista de contatos</p>
-          </Square>
-
-          <Square>
-            <FiAlertCircle size={60} color="#b8b8f2" />
-            <span>Informações da companhia</span>
-            <p>Visualize informações da companhia</p>
-          </Square>
+          <Link to="/informations">
+            <Square>
+              <FiAlertCircle size={60} color="#b8b8f2" />
+              <span>Informações da companhia</span>
+              <p>Visualize informações da companhia</p>
+            </Square>
+          </Link>
 
           <Square>
             <FiMapPin size={60} color="#b8b8f2" />

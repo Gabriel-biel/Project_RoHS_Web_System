@@ -11,7 +11,7 @@ interface ISidebarProps {
 const Sidebar: React.FC<ISidebarProps> = ({ page }: ISidebarProps) => {
   return (
     <Container>
-      <img src={logo} alt="Salcomp" />
+      <img src={logo} alt="Salcomp"/>
 
       <LinkSideBar isActive={page === 'ic'} to="/dashboard">
         Dashboard

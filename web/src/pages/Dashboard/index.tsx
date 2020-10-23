@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdContacts } from 'react-icons/md'
+import { useHistory } from 'react-router-dom'
 import { FiAlertCircle, FiMapPin } from 'react-icons/fi'
 
 import salcompLogo from '../../assets/salcomp-logo.jpg'
@@ -9,6 +10,8 @@ import Sidebar from '../../components/Sidebar'
 import { Grid, Main, ImageContainer, ListSquare, Square } from './styles'
 
 const Dashboard = () => {
+  const history = useHistory()
+
   return (
     <Grid>
       <Sidebar page="ic" />
@@ -25,7 +28,7 @@ const Dashboard = () => {
         </ImageContainer>
 
         <ListSquare>
-          <Square>
+          <Square onClick={() => history.push('contacts')}>
             <MdContacts size={60} color="#b8b8f2" />
             <span>Contatos</span>
             <p>Veja sua lista de contatos</p>

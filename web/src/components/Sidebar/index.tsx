@@ -14,7 +14,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }: ISidebarProps) => {
       <img src={logo} alt="Salcomp" />
 
       <LinkSideBar isActive={page === 'ic'} to="/dashboard">
-        Informações da companhia
+        Dashboard
       </LinkSideBar>
       <LinkSideBar isActive={page === 'gd'} to="/documents">
         Gerenciamento de documentos

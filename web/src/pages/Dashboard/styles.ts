@@ -27,6 +27,10 @@ export const Main = styled.main`
     justify-content: flex-end;
     padding: 0 24px;
 
+    div {
+      margin: 20px 20px;
+    }
+
     span {
       font-size: 14px;
     }
@@ -46,6 +50,7 @@ export const ImageContainer = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 8px;
   }
 `
 
@@ -53,6 +58,7 @@ export const ListSquare = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 32px;
+  margin-top: -80px;
   max-width: 1024px;
 `
 
@@ -60,7 +66,7 @@ export const Square = styled.button`
   width: 310px;
   height: 240px;
   background: #fff;
-  margin-top: -80px;
+  margin-bottom: 32px;
   border: 1px solid #e1e0ef;
 
   display: flex;

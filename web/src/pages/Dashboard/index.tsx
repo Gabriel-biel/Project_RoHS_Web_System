@@ -42,6 +42,42 @@ const Dashboard = () => {
             <span>Localização</span>
             <p>Veja as melhores rotas</p>
           </Square>
+
+          <Square>
+            <MdContacts size={60} color="#b8b8f2" />
+            <span>Contatos</span>
+            <p>Veja sua lista de contatos</p>
+          </Square>
+
+          <Square>
+            <FiAlertCircle size={60} color="#b8b8f2" />
+            <span>Informações da companhia</span>
+            <p>Visualize informações da companhia</p>
+          </Square>
+
+          <Square>
+            <FiMapPin size={60} color="#b8b8f2" />
+            <span>Localização</span>
+            <p>Veja as melhores rotas</p>
+          </Square>
+
+          <Square>
+            <MdContacts size={60} color="#b8b8f2" />
+            <span>Contatos</span>
+            <p>Veja sua lista de contatos</p>
+          </Square>
+
+          <Square>
+            <FiAlertCircle size={60} color="#b8b8f2" />
+            <span>Informações da companhia</span>
+            <p>Visualize informações da companhia</p>
+          </Square>
+
+          <Square>
+            <FiMapPin size={60} color="#b8b8f2" />
+            <span>Localização</span>
+            <p>Veja as melhores rotas</p>
+          </Square>
         </ListSquare>
       </Main>
     </Grid>

@@ -1,6 +1,7 @@
 import { getRepository } from 'typeorm'
 import { compare } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
+import authConfig from '@config/auth'
 
 import Provider from '../infra/typeorm/entities/Provider'
 
@@ -32,9 +33,11 @@ class AuthenticateProviderService {
       throw new Error('Incorrect email or password combination')
     }
 
-    const token = sign({}, '3e51873bb507d32cda878d679b851500', {
+    const { secret, expiresIn } = authConfig.jwt
+
+    const token = sign({}, secret, {
       subject: provider.id,
-      expiresIn: '1d'
+      expiresIn
     })
 
     return { provider, token }

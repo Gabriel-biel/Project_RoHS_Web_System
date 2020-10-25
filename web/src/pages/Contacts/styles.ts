@@ -11,6 +11,8 @@ export const Grid = styled.div`
 `
 
 export const Main = styled.div`
+  padding: 24px;
+
   h1 {
     width: 500px;
     color: #333;
@@ -18,26 +20,6 @@ export const Main = styled.div`
     font-size: 18px;
     margin: 0 auto;
     margin-top: 20px;
-  }
-`
-
-export const ListaContatos = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 24px;
-
-  table {
-    width: 100%;
-    margin-top: 24px;
-
-    td {
-      text-align: center;
-    }
-
-    th {
-      text-align: center;
-    }
   }
 `
 export const LogoMainFooter = styled.div``
@@ -104,3 +86,27 @@ export const ButtonView = styled.div`
     }
   }
 `
+
+export const ContactList = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+  background: #fff;
+  margin-top: 24px;
+`
+
+export const TableContainer = styled.table`
+  width: 100%;
+  max-width: 1240px;
+  padding: 24px;
+`
+
+export const TableRow = styled.tr``
+
+export const TableTitle = styled.th`
+  background: #999;
+  height: 45px;
+`
+
+export const TableLine = styled.td``

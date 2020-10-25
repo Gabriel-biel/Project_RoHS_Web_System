@@ -1,5 +1,6 @@
 import { getRepository } from 'typeorm'
 import { hash } from 'bcryptjs'
+import AppError from '@shared/errors/AppError'
 
 import ICreateProviderDTO from '@modules/providers/dtos/ICreateProviderDTO'
 
@@ -21,7 +22,7 @@ class CreateProviderService {
     })
 
     if (verifyProviderById) {
-      throw new Error('Provider already exists')
+      throw new AppError('Provider already exists')
     }
 
     const verifyProviderByCnpj = await providersRepository.findOne({
@@ -29,7 +30,7 @@ class CreateProviderService {
     })
 
     if (verifyProviderByCnpj) {
-      throw new Error('Provider already exists')
+      throw new AppError('Provider already exists')
     }
 
     const hashedPassword = await hash(password, 10)

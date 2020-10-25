@@ -2,6 +2,7 @@ import { getRepository } from 'typeorm'
 import { compare } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
 import authConfig from '@config/auth'
+import AppError from '@shared/errors/AppError'
 
 import Provider from '../infra/typeorm/entities/Provider'
 
@@ -24,13 +25,13 @@ class AuthenticateProviderService {
     })
 
     if (!provider) {
-      throw new Error('Incorrect email or password combination')
+      throw new AppError('Incorrect email or password combination', 401)
     }
 
     const passwordMatched = await compare(password, provider.password)
 
     if (!passwordMatched) {
-      throw new Error('Incorrect email or password combination')
+      throw new AppError('Incorrect email or password combination', 401)
     }
 
     const { secret, expiresIn } = authConfig.jwt

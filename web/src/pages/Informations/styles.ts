@@ -34,7 +34,7 @@ export const Main = styled.div`
   }
 `
 
-export const Form = styled.div`
+export const Form = styled.form`
   width: 568px;
   display: flex;
   flex-direction: column;
@@ -57,6 +57,26 @@ export const Form = styled.div`
     &::placeholder {
       font-size: 16px;
       color: #B2B2B2;
+    }
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 200px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(46, 245, 13, 0.38);
+      transition: background-color 0.2s;
+      color: #fff;
+      font-weight: 600;
+      &:hover {
+        background: rgba(46, 245, 13, 0.2);
+      }
     }
   }
 `

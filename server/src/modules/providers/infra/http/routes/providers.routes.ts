@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import ProvidersController from '../controller/ProvidersControler'
+import ProvidersController from '../controllers/ProvidersController'
 
 const providersRouter = Router()
 

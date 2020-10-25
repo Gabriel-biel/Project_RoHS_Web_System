@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 
 import { getRepository } from 'typeorm'
 
-import Provider from '../models/Provider'
+import Provider from '@modules/providers/infra/typeorm/entities/Provider'
 
 export default class ProvidersController {
   async index(request: Request, response: Response): Promise<Response> {

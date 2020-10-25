@@ -9,8 +9,10 @@
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
+    "bcryptjs": "^2.4.3",
     "eslint-config-standard": "^15.0.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-node": "11.1.0",

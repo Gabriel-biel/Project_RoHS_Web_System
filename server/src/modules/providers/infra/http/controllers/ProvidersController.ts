@@ -20,19 +20,15 @@ export default class ProvidersController {
 
     const createProvider = new CreateProviderService()
 
-    try {
-      const provider = await createProvider.execute({
-        name,
-        identifier,
-        password,
-        cnpj,
-        location,
-        segment
-      })
+    const provider = await createProvider.execute({
+      name,
+      identifier,
+      password,
+      cnpj,
+      location,
+      segment
+    })
 
-      return response.status(200).json(provider)
-    } catch (err) {
-      return response.status(401).json({ error: err.message })
-    }
+    return response.status(200).json(provider)
   }
 }

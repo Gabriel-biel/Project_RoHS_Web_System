@@ -43,33 +43,38 @@ const Contacts: React.FC = () => {
         </ButtonView>
         <ContactList>
           <TableContainer>
-            <TableRow>
-              <TableTitle>
-                <input type="checkbox" />
-              </TableTitle>
-              <TableTitle>Departamento</TableTitle>
-              <TableTitle>Nome</TableTitle>
-              <TableTitle>Position</TableTitle>
-              <TableTitle>Email</TableTitle>
-              <TableTitle>Contact Nº 1</TableTitle>
-              <TableTitle>Contact Nº 2</TableTitle>
-            </TableRow>
-            <TableRow>
-              <TableLine>T.I</TableLine>
-              <TableLine>Gabriel Lima de Antonio Andrade</TableLine>
-              <TableLine>Estagíario</TableLine>
-              <TableLine>gabriel97gla98@gmail.com</TableLine>
-              <TableLine>929xxxxxxx</TableLine>
-              <TableLine>97991780447</TableLine>
-            </TableRow>
-            <TableRow>
-              <TableLine>T.I</TableLine>
-              <TableLine>Gabriel Lima de Antonio Andrade</TableLine>
-              <TableLine>Estagíario</TableLine>
-              <TableLine>gabriel97gla98@gmail.com</TableLine>
-              <TableLine>929xxxxxxx</TableLine>
-              <TableLine>97991780447</TableLine>
-            </TableRow>
+            <thead>
+              <TableRow>
+                <TableTitle>
+                  <input type="checkbox" />
+                </TableTitle>
+                <TableTitle>Departamento</TableTitle>
+                <TableTitle>Nome</TableTitle>
+                <TableTitle>Position</TableTitle>
+                <TableTitle>Email</TableTitle>
+                <TableTitle>Contact Nº 1</TableTitle>
+                <TableTitle>Contact Nº 2</TableTitle>
+              </TableRow>
+            </thead>
+
+            <tbody>
+              <TableRow>
+                <TableLine>T.I</TableLine>
+                <TableLine>Gabriel Lima de Antonio Andrade</TableLine>
+                <TableLine>Estagíario</TableLine>
+                <TableLine>gabriel97gla98@gmail.com</TableLine>
+                <TableLine>929xxxxxxx</TableLine>
+                <TableLine>97991780447</TableLine>
+              </TableRow>
+              <TableRow>
+                <TableLine>T.I</TableLine>
+                <TableLine>Gabriel Lima de Antonio Andrade</TableLine>
+                <TableLine>Estagíario</TableLine>
+                <TableLine>gabriel97gla98@gmail.com</TableLine>
+                <TableLine>929xxxxxxx</TableLine>
+                <TableLine>97991780447</TableLine>
+              </TableRow>
+            </tbody>
           </TableContainer>
         </ContactList>
         <LogoMainFooter>

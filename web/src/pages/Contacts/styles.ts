@@ -94,24 +94,38 @@ export const ContactList = styled.div`
   padding: 0;
   background: #fff;
   margin-top: 24px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background: #f1f1f1;
+
+      td {
+        padding: 12px 0;
+      }
+    }
+  }
 `
 
-export const TableContainer = styled.table`
-  width: 100%;
-  max-width: 1240px;
-  padding: 24px;
+export const Options = styled.td`
+  width: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  border-collapse: collapse;
+  input {
+    width: 18px;
+    height: 18px;
+  }
 `
 
-export const TableRow = styled.tr`
-  text-align: center;
-`
+export const Contact = styled.tr`
+  border-bottom: 1px solid #f1f1f1;
 
-export const TableTitle = styled.th`
-  background: linear-gradient(180deg, #fffbfb 0%, rgba(255, 255, 255, 0) 100%),
-    #d6cfcf;
-  height: 45px;
+  td {
+    padding: 12px 0;
+  }
 `
-
-export const TableLine = styled.td``

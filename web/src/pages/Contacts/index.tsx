@@ -7,10 +7,8 @@ import {
   ButtonView,
   LogoMainFooter,
   ContactList,
-  TableContainer,
-  TableRow,
-  TableTitle,
-  TableLine
+  Options,
+  Contact
 } from './styles'
 import carinha from '../../assets/Group.png'
 import logo from '../../assets/rohs.png'
@@ -42,49 +40,36 @@ const Contacts: React.FC = () => {
           </button>
         </ButtonView>
         <ContactList>
-          <TableContainer>
+          <table>
             <thead>
-              <TableRow>
-                <TableTitle>
+              <tr>
+                <Options>
                   <input type="checkbox" />
-                </TableTitle>
-                <TableTitle>Departamento</TableTitle>
-                <TableTitle>Nome</TableTitle>
-                <TableTitle>Position</TableTitle>
-                <TableTitle>Email</TableTitle>
-                <TableTitle>Contact Nº 1</TableTitle>
-                <TableTitle>Contact Nº 2</TableTitle>
-                <TableTitle></TableTitle>
-              </TableRow>
+                </Options>
+                <td>Department</td>
+                <td>Name</td>
+                <td>Position</td>
+                <td>Email</td>
+                <td>Contact n01</td>
+                <td>Contact n02</td>
+                <Options></Options>
+              </tr>
             </thead>
-
             <tbody>
-              <TableRow>
-                <TableLine>
+              <Contact>
+                <Options>
                   <input type="checkbox" />
-                </TableLine>
-                <TableLine>T.I</TableLine>
-                <TableLine>Gabriel Lima de Antonio Andrade</TableLine>
-                <TableLine>Estagíario</TableLine>
-                <TableLine>gabriel97gla98@gmail.com</TableLine>
-                <TableLine>929xxxxxxx</TableLine>
-                <TableLine>97991780447</TableLine>
-                <TableLine> ... </TableLine>
-              </TableRow>
-              <TableRow>
-                <TableLine>
-                  <input type="checkbox" />
-                </TableLine>
-                <TableLine>T.I</TableLine>
-                <TableLine>Gabriel Lima de Antonio Andrade</TableLine>
-                <TableLine>Estagíario</TableLine>
-                <TableLine>gabriel97gla98@gmail.com</TableLine>
-                <TableLine>929xxxxxxx</TableLine>
-                <TableLine>97991780447</TableLine>
-                <TableLine>...</TableLine>
-              </TableRow>
+                </Options>
+                <td>T.I</td>
+                <td>Gabriel Lima de Antonio Andrade</td>
+                <td>Vagabundo</td>
+                <td>gabigay24@gmail.com</td>
+                <td>92992929292</td>
+                <td>97991919191</td>
+                <Options>...</Options>
+              </Contact>
             </tbody>
-          </TableContainer>
+          </table>
         </ContactList>
         <LogoMainFooter>
           <img src="" alt="" />

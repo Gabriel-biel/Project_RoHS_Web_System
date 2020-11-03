@@ -91,7 +91,7 @@ export const ContactList = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 24px;
+  padding: 0;
   background: #fff;
   margin-top: 24px;
 `
@@ -100,12 +100,17 @@ export const TableContainer = styled.table`
   width: 100%;
   max-width: 1240px;
   padding: 24px;
+
+  border-collapse: collapse;
 `
 
-export const TableRow = styled.tr``
+export const TableRow = styled.tr`
+  text-align: center;
+`
 
 export const TableTitle = styled.th`
-  background: #999;
+  background: linear-gradient(180deg, #fffbfb 0%, rgba(255, 255, 255, 0) 100%),
+    #d6cfcf;
   height: 45px;
 `
 

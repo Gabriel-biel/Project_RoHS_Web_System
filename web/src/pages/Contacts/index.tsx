@@ -54,25 +54,34 @@ const Contacts: React.FC = () => {
                 <TableTitle>Email</TableTitle>
                 <TableTitle>Contact Nº 1</TableTitle>
                 <TableTitle>Contact Nº 2</TableTitle>
+                <TableTitle></TableTitle>
               </TableRow>
             </thead>
 
             <tbody>
               <TableRow>
+                <TableLine>
+                  <input type="checkbox" />
+                </TableLine>
                 <TableLine>T.I</TableLine>
                 <TableLine>Gabriel Lima de Antonio Andrade</TableLine>
                 <TableLine>Estagíario</TableLine>
                 <TableLine>gabriel97gla98@gmail.com</TableLine>
                 <TableLine>929xxxxxxx</TableLine>
                 <TableLine>97991780447</TableLine>
+                <TableLine> ... </TableLine>
               </TableRow>
               <TableRow>
+                <TableLine>
+                  <input type="checkbox" />
+                </TableLine>
                 <TableLine>T.I</TableLine>
                 <TableLine>Gabriel Lima de Antonio Andrade</TableLine>
                 <TableLine>Estagíario</TableLine>
                 <TableLine>gabriel97gla98@gmail.com</TableLine>
                 <TableLine>929xxxxxxx</TableLine>
                 <TableLine>97991780447</TableLine>
+                <TableLine>...</TableLine>
               </TableRow>
             </tbody>
           </TableContainer>

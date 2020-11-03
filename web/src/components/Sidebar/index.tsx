@@ -13,13 +13,13 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }: ISidebarProps) => {
     <Container>
       <img src={logo} alt="Salcomp" />
 
-      <LinkSideBar isActive={page === 'ic'} to="/dashboard">
+      <LinkSideBar isactive={page === 'ic'} to="/dashboard">
         Dashboard
       </LinkSideBar>
-      <LinkSideBar isActive={page === 'gd'} to="/documents">
+      <LinkSideBar isactive={page === 'gd'} to="/documents">
         Gerenciamento de documentos
       </LinkSideBar>
-      <LinkSideBar isActive={page === 'gp'} to="/parts">
+      <LinkSideBar isactive={page === 'gp'} to="/parts">
         Gerenciamento de partes
       </LinkSideBar>
     </Container>

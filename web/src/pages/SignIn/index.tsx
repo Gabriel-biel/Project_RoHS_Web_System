@@ -22,11 +22,9 @@ const SignIn: React.FC = () => {
     (event: FormEvent) => {
       event.preventDefault()
 
-      console.log({ id, password })
-
       history.push('/dashboard')
     },
-    [id, password, history]
+    [history]
   )
 
   return (

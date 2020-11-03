@@ -2,13 +2,19 @@ import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
 interface ILinkProps {
-  isActive: boolean
+  isactive: boolean
 }
 
 export const Container = styled.div`
   grid-area: SB;
   padding: 32px 20px;
-  background: linear-gradient(180deg, #EDEDED 44.27%, rgba(177, 221, 166, 0.47) 73.44%, rgba(104, 132, 112, 0.45) 100%), rgba(46, 245, 13, 0.38);
+  background: linear-gradient(
+      180deg,
+      #ededed 44.27%,
+      rgba(177, 221, 166, 0.47) 73.44%,
+      rgba(104, 132, 112, 0.45) 100%
+    ),
+    rgba(46, 245, 13, 0.38);
 
   display: flex;
   flex-direction: column;
@@ -31,7 +37,7 @@ export const LinkSideBar = styled(Link)<ILinkProps>`
   align-items: center;
 
   ${props =>
-    props.isActive &&
+    props.isactive &&
     css`
       color: #725de8;
       font-weight: 600;

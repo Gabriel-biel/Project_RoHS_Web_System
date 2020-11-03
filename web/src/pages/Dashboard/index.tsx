@@ -1,9 +1,7 @@
 import React from 'react'
 import { MdContacts } from 'react-icons/md'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { FiAlertCircle, FiMapPin } from 'react-icons/fi'
-
-import { Link } from 'react-router-dom'
 
 import salcompLogo from '../../assets/salcomp-logo.jpg'
 

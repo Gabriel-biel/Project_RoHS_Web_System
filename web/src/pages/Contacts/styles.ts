@@ -16,8 +16,9 @@ export const Main = styled.div`
   h1 {
     width: 500px;
     color: #333;
+    font-family: Quicksand;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
     margin: 0 auto;
     margin-top: 20px;
   }
@@ -67,22 +68,18 @@ export const ButtonView = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 174px;
+    width: 200px;
     height: 40px;
     border-radius: 10px;
-    background: linear-gradient(
-        180deg,
-        #ededed 47.92%,
-        rgba(255, 255, 255, 0) 93.23%
-      ),
-      #2ef50d;
+    background: #43b162;
     border-radius: 10px;
     transform: rotate(0.01deg);
-    color: #999;
-    font-weight: 500;
+    font-family: Roboto;
+    color: #fff;
+    font-weight: 400;
 
-    img {
-      margin-right: 14px;
+    svg {
+      margin-right: 20px;
     }
   }
 `
@@ -116,9 +113,23 @@ export const Options = styled.td`
   align-items: center;
   justify-content: center;
 
+  cursor: pointer;
+
   input {
     width: 18px;
     height: 18px;
+
+    cursor: pointer;
+  }
+
+  div {
+    display: none;
+  }
+
+  &:hover {
+    div {
+      display: flex;
+    }
   }
 `
 

@@ -10,7 +10,7 @@ import {
   Options,
   Contact
 } from './styles'
-import carinha from '../../assets/Group.png'
+import { FiPlusCircle, FiTrash, FiEdit } from 'react-icons/fi'
 import logo from '../../assets/rohs.png'
 import salcompRed from '../../assets/logo.png'
 
@@ -35,8 +35,8 @@ const Contacts: React.FC = () => {
         </h1>
         <ButtonView>
           <button>
-            <img src={carinha} alt="Carinha asiático" />
-            Pressione
+            <FiPlusCircle size={28} color="#fff" />
+            New Contact
           </button>
         </ButtonView>
         <ContactList>
@@ -66,7 +66,17 @@ const Contacts: React.FC = () => {
                 <td>gabigay24@gmail.com</td>
                 <td>92992929292</td>
                 <td>97991919191</td>
-                <Options>...</Options>
+                <Options>
+                  ...
+                  <div>
+                    <button>
+                      <FiTrash size={16} color="#333" />
+                    </button>
+                    <button>
+                      <FiEdit size={16} color="#333" />
+                    </button>
+                  </div>
+                </Options>
               </Contact>
             </tbody>
           </table>

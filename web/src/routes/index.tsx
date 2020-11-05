@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import SignIn from '../pages/SignIn'
 import Dashboard from '../pages/Dashboard'
-import informations from '../pages/Informations'
+import Informations from '../pages/Informations'
 import DocumentsManagement from '../pages/DocumentsManagement'
 import PartsManagement from '../pages/PartsManagement'
 import Contacts from '../pages/Contacts'
@@ -12,7 +12,7 @@ const Routes: React.FC = () => (
   <Switch>
     <Route path="/" exact component={SignIn} />
     <Route path="/dashboard" exact component={Dashboard} />
-    <Route path="/informations" exact component={informations} />
+    <Route path="/informations" exact component={Informations} />
     <Route path="/documents" exact component={DocumentsManagement} />
     <Route path="/parts" exact component={PartsManagement} />
     <Route path="/contacts" exact component={Contacts} />

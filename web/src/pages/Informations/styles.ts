@@ -56,7 +56,7 @@ export const Form = styled.form`
 
     &::placeholder {
       font-size: 16px;
-      color: #B2B2B2;
+      color: #b2b2b2;
     }
   }
 
@@ -70,7 +70,7 @@ export const Form = styled.form`
       width: 200px;
       height: 40px;
       border-radius: 10px;
-      background: rgba(46, 245, 13, 0.38);
+      background: #43b162;
       transition: background-color 0.2s;
       color: #fff;
       font-weight: 600;

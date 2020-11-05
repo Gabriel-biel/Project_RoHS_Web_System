@@ -11,7 +11,7 @@ export const Grid = styled.div`
 `
 
 export const Main = styled.div`
-  padding: 24px;
+  padding: 20px;
 
   h1 {
     width: 500px;
@@ -20,7 +20,27 @@ export const Main = styled.div`
     font-weight: bold;
     font-size: 22px;
     margin: 0 auto;
-    margin-top: 20px;
+  }
+`
+export const BackButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  button.voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    width: 125px;
+    height: 25px;
+    border-radius: 40px;
+    background: #3cc8b4;
+    color: #fff;
+    font-family: Roboto;
+
+    svg {
+      margin-right: 10px;
+    }
   }
 `
 export const LogoMainFooter = styled.div``
@@ -100,6 +120,7 @@ export const ContactList = styled.div`
       background: #f1f1f1;
 
       td {
+        text-align: center;
         padding: 12px 0;
       }
     }
@@ -135,6 +156,7 @@ export const Options = styled.td`
 
 export const Contact = styled.tr`
   border-bottom: 1px solid #f1f1f1;
+  text-align: center;
 
   td {
     padding: 12px 0;

@@ -1,4 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { FiPlusCircle, FiTrash, FiEdit, FiArrowLeft } from 'react-icons/fi'
+
+import logo from '../../assets/rohs.png'
+import salcompRed from '../../assets/logo.png'
 
 import {
   Grid,
@@ -8,11 +13,9 @@ import {
   LogoMainFooter,
   ContactList,
   Options,
+  BackButton,
   Contact
 } from './styles'
-import { FiPlusCircle, FiTrash, FiEdit } from 'react-icons/fi'
-import logo from '../../assets/rohs.png'
-import salcompRed from '../../assets/logo.png'
 
 const Contacts: React.FC = () => {
   return (
@@ -29,15 +32,25 @@ const Contacts: React.FC = () => {
         </div>
       </Sidebar>
       <Main>
+        <BackButton>
+          <Link to="dashboard">
+            <button className="voltar">
+              <FiArrowLeft size={20} color="#fff" />
+              Back
+            </button>
+          </Link>
+        </BackButton>
         <h1>
           Caro fornecedor, cadastre aqui suas informações princiapis para que
           sejam notificados sobre informações importantes.
         </h1>
         <ButtonView>
-          <button>
-            <FiPlusCircle size={28} color="#fff" />
-            New Contact
-          </button>
+          <Link to="informations">
+            <button>
+              <FiPlusCircle size={28} color="#fff" />
+              New Contact
+            </button>
+          </Link>
         </ButtonView>
         <ContactList>
           <table>

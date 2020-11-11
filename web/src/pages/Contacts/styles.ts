@@ -128,7 +128,7 @@ export const ContactList = styled.div`
 `
 
 export const Options = styled.td`
-  width: 30px;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -144,12 +144,10 @@ export const Options = styled.td`
   }
 
   div {
-    display: none;
-  }
+    display: flex;
 
-  &:hover {
-    div {
-      display: flex;
+    button {
+      margin-right: 2px;
     }
   }
 `

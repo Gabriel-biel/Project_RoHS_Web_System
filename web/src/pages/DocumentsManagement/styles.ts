@@ -30,10 +30,14 @@ export const Sidebar = styled.div`
   align-items: center;
   max-height: 100vh;
 
-  justify-content: space-between;
+  justify-content: columns;
 
   img {
     margin-bottom: 60px;
+  }
+
+  img.salcompRed {
+    margin: 10rem 10rem;
   }
 
   div {

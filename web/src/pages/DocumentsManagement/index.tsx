@@ -37,7 +37,7 @@ const DocumentsManagement: React.FC<ISidebarProps> = ({
           Documentos e Declarações
         </LinkSideBar>
 
-        <img src={salcompRed} alt="logo-empresa" />
+        <img src={salcompRed} className="salcompRed" alt="logo-empresa" />
 
         <div>
           <span>Seguimento de Embalagens</span>

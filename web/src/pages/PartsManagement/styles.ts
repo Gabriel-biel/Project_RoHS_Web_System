@@ -57,41 +57,19 @@ export const Main = styled.div`
   }
 `
 
-export const LogoMainFooter = styled.div``
-
-export const ButtonView = styled.div`
-  width: 100%;
+export const LogoMainFooter = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 
-  padding: 0 32px;
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    background: #43b162;
-    border-radius: 10px;
-    transform: rotate(0.01deg);
-    font-family: Roboto;
-    color: #fff;
-    font-weight: 400;
-
-    svg {
-      margin-right: 20px;
-    }
-  }
+  margin-top: 24px;
 `
 
 export const BackButton = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  button.voltar {
+  button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,7 +87,35 @@ export const BackButton = styled.div`
   }
 `
 
-export const ContactList = styled.div`
+export const DescriptionPart = styled.div`
+  display: flex;
+
+  div {
+    width: 100%;
+  }
+
+  div.PartCode {
+    width: 480px;
+  }
+
+  label {
+    font-size: 14px;
+    text-align: left;
+    color: #847979;
+  }
+
+  input {
+    width: 90%;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    background: #f8f8f8;
+    border-radius: 10px;
+  }
+`
+
+export const PartsList = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -122,49 +128,48 @@ export const ContactList = styled.div`
     border-collapse: collapse;
 
     input {
+      height: 90%;
       border: solid 1px;
       text-align: center;
     }
 
     thead {
-      background: #f1f1f1;
+      background: #beebb5;
 
       td {
         text-align: center;
         padding: 12px 0;
+        font-weight: bold;
       }
     }
   }
 `
-
-export const Options = styled.td`
-  width: 30px;
-  height: 100%;
+export const ButtonSubmit = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
-  cursor: pointer;
+  margin-top: 200px;
 
-  input {
-    width: 18px;
-    height: 18px;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    cursor: pointer;
-  }
+    width: 200px;
+    height: 50px;
 
-  div {
-    display: none;
-  }
+    border-radius: 10px;
+    background: #43b162;
+    border-radius: 10px;
 
-  &:hover {
-    div {
-      display: flex;
-    }
+    font-family: Roboto;
+    color: #fff;
+    font-weight: 400;
   }
 `
 
-export const Contact = styled.tr`
+export const PartsInfo = styled.tr`
   border-bottom: 1px solid #f1f1f1;
   text-align: center;
 

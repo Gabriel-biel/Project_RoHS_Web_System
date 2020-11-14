@@ -81,9 +81,9 @@ const Contacts: React.FC = () => {
                 <td>97991919191</td>
                 <Options>
                   <div>
-                    <button>
+                    <Link to="informations">
                       <FiEdit size={20} color="#333" />
-                    </button>
+                    </Link>
                     <button>
                       <FiTrash size={20} color="#333" />
                     </button>

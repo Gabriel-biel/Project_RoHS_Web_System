@@ -14,6 +14,28 @@ export const Grid = styled.div`
 
   height: 100vh;
 `
+
+export const BGModal = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: none;
+
+  div {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+  }
+`
+
 export const Sidebar = styled.div`
   grid-area: SB;
   padding: 32px 20px;
@@ -134,7 +156,7 @@ export const ButtonView = styled.div`
   }
 `
 
-export const ContactList = styled.div`
+export const PartsList = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -188,12 +210,17 @@ export const Options = styled.td`
   }
 `
 
-export const Contact = styled.tr`
+export const InfoParts = styled.tr`
   border-bottom: 1px solid #f1f1f1;
   text-align: center;
 
   td {
     padding: 12px 0;
+  }
+
+  button {
+    background: white;
+    text-decoration: underline;
   }
 
   span.aprovado {

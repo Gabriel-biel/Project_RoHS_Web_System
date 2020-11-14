@@ -147,7 +147,8 @@ export const Options = styled.td`
     display: flex;
 
     button {
-      margin-right: 2px;
+      margin: 0 2px 0 6px;
+      background: #fff;
     }
   }
 `

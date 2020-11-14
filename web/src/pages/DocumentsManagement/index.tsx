@@ -12,10 +12,11 @@ import {
   Sidebar,
   ButtonView,
   LogoMainFooter,
-  ContactList,
+  PartsList,
   Options,
   BackButton,
-  Contact
+  BGModal,
+  InfoParts
 } from './styles'
 
 interface ISidebarProps {
@@ -27,6 +28,52 @@ const DocumentsManagement: React.FC<ISidebarProps> = ({
 }: ISidebarProps) => {
   return (
     <Grid>
+      <BGModal>
+        <div>
+          <button>Edit</button>
+          <h1>XXXXXX</h1>
+          <table>
+            <thead>
+              <tr>
+                <td>Sub Part</td>
+                <td>Sub Group</td>
+                <td>GWI-11A1</td>
+                <td>FISP/MSDS</td>
+                <td>Rohs Report</td>
+                <td>Date Rohs Report</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <PartsList>
+                <td>
+                  <input type="text" placeholder="Paper" />
+                </td>
+                <td>
+                  <select name="cars" id="cars">
+                    <option value="Select">Select</option>
+                    <option value="First option">First Option</option>
+                    <option value="saab">Secund Option</option>
+                    <option value="opel">Three Option</option>
+                    <option value="audi">Four Opion</option>
+                  </select>
+                </td>
+                <td>Upload</td>
+                <td>Upload</td>
+                <td>Upload</td>
+                <td>
+                  <input type="date" />
+                </td>
+                <td>
+                  <Link to="">
+                    <FiPlusCircle size={28} color="#43B162" />
+                  </Link>
+                </td>
+              </PartsList>
+            </tbody>
+          </table>
+        </div>
+      </BGModal>
       <Sidebar>
         <img src={logo} alt="Salcomp" />
 
@@ -59,14 +106,14 @@ const DocumentsManagement: React.FC<ISidebarProps> = ({
           sejam notificados sobre informações importantes.
         </h1>
         <ButtonView>
-          <Link to="informations">
+          <Link to="parts">
             <button>
               <FiPlusCircle size={28} color="#fff" />
               New Part Code
             </button>
           </Link>
         </ButtonView>
-        <ContactList>
+        <PartsList>
           <table>
             <thead>
               <tr>
@@ -81,29 +128,63 @@ const DocumentsManagement: React.FC<ISidebarProps> = ({
               </tr>
             </thead>
             <tbody>
-              <Contact>
+              <InfoParts>
                 <Options>
                   <input type="checkbox" />
                 </Options>
                 <td>
-                  <a href="/part">XXXXXX</a>
+                  <button>XXXXXX</button>
                 </td>
                 <td>
                   <input type="text" />
                 </td>
                 <td>20/12/2020</td>
                 <td>
-                  <span className="aprovado">Aprovado</span>/
-                  <span className="reprovado">Reprovado</span>/
+                  <span className="aprovado">Aprovado</span>
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+              </InfoParts>
+              <InfoParts>
+                <Options>
+                  <input type="checkbox" />
+                </Options>
+                <td>
+                  <button>XXXXXX</button>
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>20/12/2020</td>
+                <td>
+                  <span className="reprovado">Reprovado</span>
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+              </InfoParts>
+              <InfoParts>
+                <Options>
+                  <input type="checkbox" />
+                </Options>
+                <td>
+                  <button>XXXXXX</button>
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>20/12/2020</td>
+                <td>
                   <span className="pendente">Pendente</span>
                 </td>
                 <td>
                   <input type="text" />
                 </td>
-              </Contact>
+              </InfoParts>
             </tbody>
           </table>
-        </ContactList>
+        </PartsList>
         <LogoMainFooter>
           <img src="" alt="" />
         </LogoMainFooter>

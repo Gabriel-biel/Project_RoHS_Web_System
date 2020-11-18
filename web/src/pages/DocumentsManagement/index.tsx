@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiPlusCircle, FiArrowLeft } from 'react-icons/fi'
 
 import logo from '../../assets/rohs.png'
 import salcompRed from '../../assets/logo.png'
+
+import Modal from '../../components/ModalDocuments'
 
 import {
   Grid,
@@ -15,7 +17,6 @@ import {
   PartsList,
   Options,
   BackButton,
-  BGModal,
   InfoParts
 } from './styles'
 
@@ -26,54 +27,10 @@ interface ISidebarProps {
 const DocumentsManagement: React.FC<ISidebarProps> = ({
   page
 }: ISidebarProps) => {
+  const [isModal, setIsModal] = useState(true)
   return (
     <Grid>
-      <BGModal>
-        <div>
-          <button>Edit</button>
-          <h1>XXXXXX</h1>
-          <table>
-            <thead>
-              <tr>
-                <td>Sub Part</td>
-                <td>Sub Group</td>
-                <td>GWI-11A1</td>
-                <td>FISP/MSDS</td>
-                <td>Rohs Report</td>
-                <td>Date Rohs Report</td>
-                <td></td>
-              </tr>
-            </thead>
-            <tbody>
-              <PartsList>
-                <td>
-                  <input type="text" placeholder="Paper" />
-                </td>
-                <td>
-                  <select name="cars" id="cars">
-                    <option value="Select">Select</option>
-                    <option value="First option">First Option</option>
-                    <option value="saab">Secund Option</option>
-                    <option value="opel">Three Option</option>
-                    <option value="audi">Four Opion</option>
-                  </select>
-                </td>
-                <td>Upload</td>
-                <td>Upload</td>
-                <td>Upload</td>
-                <td>
-                  <input type="date" />
-                </td>
-                <td>
-                  <Link to="">
-                    <FiPlusCircle size={28} color="#43B162" />
-                  </Link>
-                </td>
-              </PartsList>
-            </tbody>
-          </table>
-        </div>
-      </BGModal>
+      {isModal ? <Modal onClose={() => setIsModal(false)} /> : null}
       <Sidebar>
         <img src={logo} alt="Salcomp" />
 
@@ -133,7 +90,7 @@ const DocumentsManagement: React.FC<ISidebarProps> = ({
                   <input type="checkbox" />
                 </Options>
                 <td>
-                  <button>XXXXXX</button>
+                  <button onClick={() => setIsModal(true)}>XXXXXX</button>
                 </td>
                 <td>
                   <input type="text" />

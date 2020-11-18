@@ -15,27 +15,6 @@ export const Grid = styled.div`
   height: 100vh;
 `
 
-export const BGModal = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-
-  align-items: center;
-  justify-content: center;
-
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 0;
-  display: none;
-
-  div {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    background-color: white;
-  }
-`
-
 export const Sidebar = styled.div`
   grid-area: SB;
   padding: 32px 20px;
@@ -145,7 +124,6 @@ export const ButtonView = styled.div`
     border-radius: 10px;
     background: #43b162;
     border-radius: 10px;
-    transform: rotate(0.01deg);
     font-family: Roboto;
     color: #fff;
     font-weight: 400;

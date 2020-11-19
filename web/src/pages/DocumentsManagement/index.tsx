@@ -27,7 +27,7 @@ interface ISidebarProps {
 const DocumentsManagement: React.FC<ISidebarProps> = ({
   page
 }: ISidebarProps) => {
-  const [isModal, setIsModal] = useState(true)
+  const [isModal, setIsModal] = useState(false)
   return (
     <Grid>
       {isModal ? <Modal onClose={() => setIsModal(false)} /> : null}

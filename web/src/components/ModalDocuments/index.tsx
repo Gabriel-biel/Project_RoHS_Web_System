@@ -2,18 +2,32 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FiPlusCircle } from 'react-icons/fi'
 
-import { PartsList, PopupModal, ContentPage } from './styles'
+import {
+  PopupModal,
+  PartsList,
+  PartsInfo,
+  CloseButton,
+  PopupContent,
+  EditButton,
+  ContentPage
+} from './styles'
 
 const Modal = ({ onClose = () => {} }) => {
   return (
     <PopupModal>
-      <div>
-        <button className="close" onClick={onClose}>
-          +
-        </button>
+      <PopupContent>
+        <CloseButton>
+          <span>Parts Managements: XY0000</span>
+          <button className="close" onClick={onClose}>
+            +
+          </button>
+        </CloseButton>
         <ContentPage>
-          <button className="Edit">Edit</button>
+          <EditButton>
+            <button className="Edit">Edit</button>
+          </EditButton>
           <h1>XXXXXX</h1>
+          <PartsList>
           <table>
             <thead>
               <tr>
@@ -23,11 +37,12 @@ const Modal = ({ onClose = () => {} }) => {
                 <td>FISP/MSDS</td>
                 <td>Rohs Report</td>
                 <td>Date Rohs Report</td>
+                <td>Status</td>
                 <td></td>
               </tr>
             </thead>
             <tbody>
-              <PartsList>
+              <PartsInfo>
                 <td>
                   <input type="text" placeholder="Paper" />
                 </td>
@@ -40,22 +55,26 @@ const Modal = ({ onClose = () => {} }) => {
                     <option value="audi">Four Opion</option>
                   </select>
                 </td>
-                <td>Upload</td>
-                <td>Upload</td>
-                <td>Upload</td>
+                <td>Upload DOC</td>
+                <td>Upload DOC</td>
+                <td>Upload DOC</td>
                 <td>
                   <input type="date" />
+                </td>
+                <td>
+                  <span className="aprovado">Aprovado</span>
                 </td>
                 <td>
                   <Link to="">
                     <FiPlusCircle size={28} color="#43B162" />
                   </Link>
                 </td>
-              </PartsList>
+              </PartsInfo>
             </tbody>
           </table>
+        </PartsList>
         </ContentPage>
-      </div>
+      </PopupContent>
     </PopupModal>
   )
 }

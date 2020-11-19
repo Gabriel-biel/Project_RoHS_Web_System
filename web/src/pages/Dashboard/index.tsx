@@ -5,16 +5,32 @@ import { FiAlertCircle, FiMapPin } from 'react-icons/fi'
 
 import salcompLogo from '../../assets/salcomp-logo.jpg'
 
-import Sidebar from '../../components/Sidebar'
+import {
+  Grid,
+  Main,
+  ImageContainer,
+  ListSquare,
+  Square,
+  Sidebar
+} from './styles'
 
-import { Grid, Main, ImageContainer, ListSquare, Square } from './styles'
+import logo from '../../assets/rohs.png'
+import salcompRed from '../../assets/logo.png'
 
 const Dashboard = () => {
   const history = useHistory()
 
   return (
     <Grid>
-      <Sidebar page="ic" />
+      <Sidebar>
+        <img src={logo} alt="Salcomp" />
+
+        <img src={salcompRed} alt="logo-empresa" />
+
+        <div>
+          <Link to="/register">Edit Profile</Link>
+        </div>
+      </Sidebar>
       <Main>
         <header>
           <div>
@@ -36,11 +52,11 @@ const Dashboard = () => {
             </Square>
           </Link>
 
-          <Link to="/informations">
+          <Link to="/parts">
             <Square>
               <FiAlertCircle size={60} color="#b8b8f2" />
-              <span>Informações da companhia</span>
-              <p>Visualize informações da companhia</p>
+              <span>Documents Management</span>
+              <p>Informações da Compania</p>
             </Square>
           </Link>
 

@@ -125,6 +125,11 @@ export const PartsInfo = styled.tr`
 
   td {
     padding: 12px 0;
+
+    select {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   span.aprovado {

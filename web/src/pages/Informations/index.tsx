@@ -1,16 +1,10 @@
 import React from 'react'
 
-import Sidebar from '../../components/Sidebar'
-
 import { Main, Grid, Form } from './styles'
 
 const Informations = () => {
-  // const handleSubmit = useCallback(() => {
-
-  // },[])
   return (
     <Grid>
-      <Sidebar page="ic" />
       <Main>
         <span>Olá, registre seus dados e muita atenção!</span>
         <Form>
@@ -33,6 +27,7 @@ const Informations = () => {
           <input type="text" placeholder="Contato Nº2" />
           <div className="button">
             <button type="submit">Salvar</button>
+            <a href="/contacts">Cancelar</a>
           </div>
         </Form>
       </Main>

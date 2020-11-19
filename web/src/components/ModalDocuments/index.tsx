@@ -28,51 +28,51 @@ const Modal = ({ onClose = () => {} }) => {
           </EditButton>
           <h1>XXXXXX</h1>
           <PartsList>
-          <table>
-            <thead>
-              <tr>
-                <td>Sub Part</td>
-                <td>Sub Group</td>
-                <td>GWI-11A1</td>
-                <td>FISP/MSDS</td>
-                <td>Rohs Report</td>
-                <td>Date Rohs Report</td>
-                <td>Status</td>
-                <td></td>
-              </tr>
-            </thead>
-            <tbody>
-              <PartsInfo>
-                <td>
-                  <input type="text" placeholder="Paper" />
-                </td>
-                <td>
-                  <select name="cars" id="cars">
-                    <option value="Select">Select</option>
-                    <option value="First option">First Option</option>
-                    <option value="saab">Secund Option</option>
-                    <option value="opel">Three Option</option>
-                    <option value="audi">Four Opion</option>
-                  </select>
-                </td>
-                <td>Upload DOC</td>
-                <td>Upload DOC</td>
-                <td>Upload DOC</td>
-                <td>
-                  <input type="date" />
-                </td>
-                <td>
-                  <span className="aprovado">Aprovado</span>
-                </td>
-                <td>
-                  <Link to="">
-                    <FiPlusCircle size={28} color="#43B162" />
-                  </Link>
-                </td>
-              </PartsInfo>
-            </tbody>
-          </table>
-        </PartsList>
+            <table>
+              <thead>
+                <tr>
+                  <td>Sub Part</td>
+                  <td>Sub Group</td>
+                  <td>GWI-11A1</td>
+                  <td>FISP/MSDS</td>
+                  <td>Rohs Report</td>
+                  <td>Date Rohs Report</td>
+                  <td>Status</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <PartsInfo>
+                  <td>
+                    <input type="text" placeholder="Paper" />
+                  </td>
+                  <td>
+                    <select name="cars" id="cars">
+                      <option value="Select">Select</option>
+                      <option value="First option">First Option</option>
+                      <option value="saab">Secund Option</option>
+                      <option value="opel">Three Option</option>
+                      <option value="audi">Four Opion</option>
+                    </select>
+                  </td>
+                  <td>Upload DOC</td>
+                  <td>Upload DOC</td>
+                  <td>Upload DOC</td>
+                  <td>
+                    <input type="date" />
+                  </td>
+                  <td>
+                    <span className="aprovado">Aprovado</span>
+                  </td>
+                  <td>
+                    <Link to="">
+                      <FiPlusCircle size={28} color="#43B162" />
+                    </Link>
+                  </td>
+                </PartsInfo>
+              </tbody>
+            </table>
+          </PartsList>
         </ContentPage>
       </PopupContent>
     </PopupModal>

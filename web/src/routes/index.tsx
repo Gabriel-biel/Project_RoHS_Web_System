@@ -5,6 +5,7 @@ import SignIn from '../pages/SignIn'
 import Dashboard from '../pages/Dashboard'
 import Informations from '../pages/Informations'
 import DocumentsManagement from '../pages/DocumentsManagement'
+import DocumentsDeclarations from '../pages/DocumentsAndDeclarations'
 import PartsManagement from '../pages/PartsManagement'
 import Contacts from '../pages/Contacts'
 
@@ -14,6 +15,7 @@ const Routes: React.FC = () => (
     <Route path="/dashboard" exact component={Dashboard} />
     <Route path="/informations" exact component={Informations} />
     <Route path="/documents" exact component={DocumentsManagement} />
+    <Route path="/register" exact component={DocumentsDeclarations} />
     <Route path="/parts" exact component={PartsManagement} />
     <Route path="/contacts" exact component={Contacts} />
   </Switch>

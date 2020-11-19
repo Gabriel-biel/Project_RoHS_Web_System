@@ -31,14 +31,14 @@ export const Sidebar = styled.div`
   align-items: center;
   max-height: 100vh;
 
-  justify-content: columns;
+  justify-content: space-between;
 
   img {
     margin-bottom: 60px;
   }
 
   img.salcompRed {
-    margin: 10rem 10rem;
+    margin: 10rem 0 10rem 0;
   }
 
   div {
@@ -49,7 +49,6 @@ export const Sidebar = styled.div`
     flex-direction: column;
   }
 `
-
 export const LinkSideBar = styled(Link)<ILinkProps>`
   width: 100%;
   height: 40px;
@@ -63,7 +62,7 @@ export const LinkSideBar = styled(Link)<ILinkProps>`
   ${props =>
     props.isactive &&
     css`
-      color: #725de8;
+      color: red;
       font-weight: 600;
     `}
 
@@ -71,11 +70,31 @@ export const LinkSideBar = styled(Link)<ILinkProps>`
     transform: translateX(10px);
   }
 `
+
 export const Main = styled.div`
   padding: 24px;
+
+  overflow: auto;
+
+  h1 {
+    width: 500px;
+
+    color: #333;
+    text-align: center;
+
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 22px;
+
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 `
 export const BackButton = styled.div`
   display: flex;
+
+  margin-bottom: 50px;
+
   justify-content: flex-end;
 
   button.voltar {
@@ -95,10 +114,8 @@ export const BackButton = styled.div`
     }
   }
 `
-export const LogoMainFooter = styled.div``
 
 export const ButtonView = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -110,7 +127,7 @@ export const ButtonView = styled.div`
     align-items: center;
     justify-content: center;
     width: 200px;
-    height: 40px;
+    height: 50px;
     border-radius: 10px;
     background: #43b162;
     border-radius: 10px;
@@ -119,16 +136,16 @@ export const ButtonView = styled.div`
     font-weight: 400;
 
     svg {
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 `
-
 export const PartsList = styled.div`
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: center;
   padding: 0;
+
   background: #fff;
   margin-top: 24px;
 
@@ -137,62 +154,38 @@ export const PartsList = styled.div`
     border-collapse: collapse;
 
     input {
-      border: solid 1px;
+      height: 100%;
+      text-align: center;
     }
 
     thead {
-      background: #f1f1f1;
+      background: #beebb5;
 
       td {
         text-align: center;
         padding: 12px 0;
+        font-weight: bold;
       }
     }
   }
 `
 
-export const Options = styled.td`
-  width: 30px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-
-  input {
-    width: 18px;
-    height: 18px;
-
-    cursor: pointer;
-  }
-
-  div {
-    display: none;
-  }
-
-  &:hover {
-    div {
-      display: flex;
-    }
-  }
-`
-
-export const InfoParts = styled.tr`
+export const PartsInfo = styled.tr`
   border-bottom: 1px solid #f1f1f1;
   text-align: center;
 
   td {
     padding: 12px 0;
-  }
 
-  button {
-    background: white;
-    text-decoration: underline;
+    select {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   span.aprovado {
     color: #43b162;
+    font-weight: bold;
   }
   span.reprovado {
     color: #fd1809;

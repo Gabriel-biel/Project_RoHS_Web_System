@@ -69,11 +69,34 @@ export const Form = styled.form`
     button {
       width: 200px;
       height: 40px;
+
       border-radius: 10px;
+      margin: 5px;
+
       background: #43b162;
-      transition: background-color 0.2s;
       color: #fff;
       font-weight: 600;
+
+      transition: background-color 0.2s;
+      &:hover {
+        background: rgba(46, 245, 13, 0.2);
+      }
+    }
+    a {
+      width: 200px;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 10px;
+      margin: 5px;
+
+      background: #43b162;
+      color: #fff;
+      font-weight: 600;
+
+      transition: background-color 0.2s;
       &:hover {
         background: rgba(46, 245, 13, 0.2);
       }

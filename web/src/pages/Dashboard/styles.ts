@@ -10,6 +10,37 @@ export const Grid = styled.div`
   height: 100vh;
 `
 
+export const Sidebar = styled.div`
+  grid-area: SB;
+  padding: 32px 20px;
+  background: linear-gradient(
+      180deg,
+      #ededed 44.27%,
+      rgba(177, 221, 166, 0.47) 73.44%,
+      rgba(104, 132, 112, 0.45) 100%
+    ),
+    rgba(46, 245, 13, 0.38);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
+
+  justify-content: space-between;
+
+  img {
+    margin-bottom: 60px;
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+`
+
 export const Main = styled.main`
   grid-area: MN;
   overflow-y: scroll;

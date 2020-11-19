@@ -1,9 +1,4 @@
-import styled, { css } from 'styled-components'
-import { Link } from 'react-router-dom'
-
-interface ILinkProps {
-  isactive: boolean
-}
+import styled from 'styled-components'
 
 export const Grid = styled.div`
   display: grid;
@@ -14,10 +9,10 @@ export const Grid = styled.div`
 
   height: 100vh;
 `
-
 export const Sidebar = styled.div`
   grid-area: SB;
   padding: 32px 20px;
+
   background: linear-gradient(
       180deg,
       #ededed 44.27%,
@@ -49,30 +44,9 @@ export const Sidebar = styled.div`
     flex-direction: column;
   }
 `
-
-export const LinkSideBar = styled(Link)<ILinkProps>`
-  width: 100%;
-  height: 40px;
-  margin-bottom: 2px;
-  color: #505152;
-  transition: transform 0.2s;
-
-  display: flex;
-  align-items: center;
-
-  ${props =>
-    props.isactive &&
-    css`
-      color: #725de8;
-      font-weight: 600;
-    `}
-
-  &:hover {
-    transform: translateX(10px);
-  }
-`
 export const Main = styled.div`
   padding: 24px;
+  overflow: auto;
 
   h1 {
     width: 500px;
@@ -84,11 +58,20 @@ export const Main = styled.div`
     margin-top: 20px;
   }
 `
+
+export const LogoMainFooter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 24px;
+`
+
 export const BackButton = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  button.voltar {
+  button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,32 +88,32 @@ export const BackButton = styled.div`
     }
   }
 `
-export const LogoMainFooter = styled.div``
 
-export const ButtonView = styled.div`
-  width: 100%;
+export const DescriptionPart = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
 
-  padding: 0 32px;
+  div {
+    width: 100%;
+  }
 
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
+  div.PartCode {
+    width: 480px;
+  }
+
+  label {
+    font-size: 14px;
+    text-align: left;
+    color: #847979;
+  }
+
+  input {
+    width: 90%;
     height: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    background: #f8f8f8;
     border-radius: 10px;
-    background: #43b162;
-    border-radius: 10px;
-    font-family: Roboto;
-    color: #fff;
-    font-weight: 400;
-
-    svg {
-      margin-right: 20px;
-    }
   }
 `
 
@@ -147,58 +130,53 @@ export const PartsList = styled.div`
     border-collapse: collapse;
 
     input {
+      height: 90%;
       border: solid 1px;
+      text-align: center;
     }
 
     thead {
-      background: #f1f1f1;
+      background: #beebb5;
 
       td {
         text-align: center;
         padding: 12px 0;
+        font-weight: bold;
       }
     }
   }
 `
-
-export const Options = styled.td`
-  width: 30px;
-  height: 100%;
+export const ButtonSubmit = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
-  cursor: pointer;
+  margin-top: 200px;
 
-  input {
-    width: 18px;
-    height: 18px;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    cursor: pointer;
-  }
+    width: 200px;
+    height: 50px;
 
-  div {
-    display: none;
-  }
+    border-radius: 10px;
+    background: #43b162;
+    border-radius: 10px;
 
-  &:hover {
-    div {
-      display: flex;
-    }
+    font-family: Roboto;
+    color: #fff;
+    font-weight: 400;
   }
 `
 
-export const InfoParts = styled.tr`
+export const PartsInfo = styled.tr`
   border-bottom: 1px solid #f1f1f1;
   text-align: center;
 
   td {
     padding: 12px 0;
-  }
-
-  button {
-    background: white;
-    text-decoration: underline;
   }
 
   span.aprovado {

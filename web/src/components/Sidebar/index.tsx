@@ -5,7 +5,7 @@ import logo from '../../assets/rohs.png'
 import { Container, LinkSideBar } from './styles'
 
 interface ISidebarProps {
-  page: 'ic' | 'gd' | 'gp'
+  page: 'ic' | 'gerenciamentoDocumentos' | 'gerenciamentoPartes'
 }
 
 const Sidebar: React.FC<ISidebarProps> = ({ page }: ISidebarProps) => {
@@ -16,10 +16,13 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }: ISidebarProps) => {
       <LinkSideBar isactive={page === 'ic'} to="/dashboard">
         Dashboard
       </LinkSideBar>
-      <LinkSideBar isactive={page === 'gd'} to="/documents">
+      <LinkSideBar
+        isactive={page === 'gerenciamentoDocumentos'}
+        to="/documents"
+      >
         Gerenciamento de documentos
       </LinkSideBar>
-      <LinkSideBar isactive={page === 'gp'} to="/parts">
+      <LinkSideBar isactive={page === 'gerenciamentoPartes'} to="/parts">
         Gerenciamento de partes
       </LinkSideBar>
     </Container>

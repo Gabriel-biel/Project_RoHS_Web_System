@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { Main, Grid, Form } from './styles'
 
-const Informations = () => {
+const Informations = ({ onClose = () => {} }) => {
   return (
     <Grid>
       <Main>
@@ -27,7 +28,11 @@ const Informations = () => {
           <input type="text" placeholder="Contato Nº2" />
           <div className="button">
             <button type="submit">Salvar</button>
-            <a href="/contacts">Cancelar</a>
+            <Link to="/contacts">
+              <button className="cancel" onClick={onClose}>
+                Cancelar
+              </button>
+            </Link>
           </div>
         </Form>
       </Main>

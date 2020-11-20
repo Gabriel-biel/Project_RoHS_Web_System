@@ -4,15 +4,19 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/rohs.png'
 import salcompRed from '../../assets/logo.png'
 import { FiArrowLeft, FiPlusCircle } from 'react-icons/fi'
+import { MdGetApp } from 'react-icons/md'
 
 import {
   Grid,
   Sidebar,
   LinkSideBar,
   Main,
+  Square,
+  ListSquare,
   BackButton,
-  PartsList,
-  PartsInfo,
+  DocumentsList,
+  DocumentsInfo,
+  Anexos,
   ButtonView
 } from './styles'
 
@@ -61,7 +65,7 @@ const DocumentsDeclarations: React.FC<ISidebarProps> = ({
             </button>
           </Link>
         </ButtonView>
-        <PartsList>
+        <DocumentsList>
           <table>
             <thead>
               <tr>
@@ -72,17 +76,43 @@ const DocumentsDeclarations: React.FC<ISidebarProps> = ({
               </tr>
             </thead>
             <tbody>
-              <PartsInfo>
+              <DocumentsInfo>
                 <td>Name Document</td>
                 <td>
                   <input type="date" />
                 </td>
                 <td>Date</td>
                 <td>Description</td>
-              </PartsInfo>
+              </DocumentsInfo>
             </tbody>
           </table>
-        </PartsList>
+        </DocumentsList>
+        <Anexos>
+          <span>Anexos</span>
+          <hr />
+          <ListSquare>
+            <Square>
+              <span>Declaração de conflito de minerais</span>
+              <MdGetApp size={30} color="#3333" />
+              <p>click here on download</p>
+            </Square>
+            <Square>
+              <span>UL ECV</span>
+              <MdGetApp size={30} color="#3333" />
+              <p>click here on download</p>
+            </Square>
+            <Square>
+              <span>Declaração SVHC</span>
+              <MdGetApp size={30} color="#3333" />
+              <p>click here on download</p>
+            </Square>
+            <Square>
+              <span>Outro Download Qualquer</span>
+              <MdGetApp size={30} color="#3333" />
+              <p>click here on download</p>
+            </Square>
+          </ListSquare>
+        </Anexos>
       </Main>
     </Grid>
   )

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiPlusCircle, FiTrash, FiEdit, FiArrowLeft } from 'react-icons/fi'
 
 import logo from '../../assets/rohs.png'
 import salcompRed from '../../assets/logo.png'
+
+import Informations from '../../components/Modal/NewContact'
 
 import {
   Grid,
@@ -18,8 +20,13 @@ import {
 } from './styles'
 
 const Contacts: React.FC = () => {
+  const [isNewContact, setIsNewContact] = useState(true)
   return (
     <Grid>
+      {isNewContact ? (
+        <Informations onClose={() => setIsNewContact(false)} />
+      ) : null}
+
       <Sidebar>
         <img src={logo} alt="Salcomp" />
 
@@ -45,12 +52,10 @@ const Contacts: React.FC = () => {
           sejam notificados sobre informações importantes.
         </h1>
         <ButtonView>
-          <Link to="informations">
-            <button>
-              <FiPlusCircle size={28} color="#fff" />
-              New Contact
-            </button>
-          </Link>
+          <button onClick={() => setIsNewContact(true)}>
+            <FiPlusCircle size={28} color="#fff" />
+            New Contact
+          </button>
         </ButtonView>
         <ContactList>
           <table>
@@ -81,7 +86,7 @@ const Contacts: React.FC = () => {
                 <td>97991919191</td>
                 <Options>
                   <div>
-                    <Link to="informations">
+                    <Link to="newContact">
                       <FiEdit size={20} color="#333" />
                     </Link>
                     <button>

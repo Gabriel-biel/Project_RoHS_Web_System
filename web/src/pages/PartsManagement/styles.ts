@@ -73,6 +73,7 @@ export const LinkSideBar = styled(Link)<ILinkProps>`
 `
 export const Main = styled.div`
   padding: 24px;
+  overflow: auto;
 `
 export const BackButton = styled.div`
   display: flex;

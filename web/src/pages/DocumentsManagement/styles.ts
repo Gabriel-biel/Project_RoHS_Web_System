@@ -169,6 +169,11 @@ export const ButtonSubmit = styled.div`
     color: #fff;
     font-weight: 400;
   }
+
+  button.cancel {
+    margin-left: 10px;
+    background: #ed6262;
+  }
 `
 
 export const PartsInfo = styled.tr`

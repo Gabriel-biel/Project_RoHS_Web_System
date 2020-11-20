@@ -90,6 +90,63 @@ export const Main = styled.div`
     margin-top: 20px;
   }
 `
+export const Anexos = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+
+  span {
+    display: flex;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Roboto;
+  }
+`
+
+export const ListSquare = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  margin-top: 10px;
+  max-width: 1024px;
+`
+
+export const Square = styled.button`
+  width: 180px;
+  height: 180px;
+
+  background: #fff;
+  border: 1px solid #e1e0ef;
+  border-radius: 5px;
+
+  margin-bottom: 32px;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  &:hover {
+    border-color: #4268f6;
+  }
+
+  box-shadow: rgba(137, 138, 154, 0.4) 0px 4px 12px 0px;
+
+  svg {
+    margin-top: 10px;
+  }
+
+  span {
+    font-size: 18px;
+  }
+
+  p {
+    text-align: center;
+    color: #999;
+  }
+`
+
 export const BackButton = styled.div`
   display: flex;
 
@@ -140,7 +197,7 @@ export const ButtonView = styled.div`
     }
   }
 `
-export const PartsList = styled.div`
+export const DocumentsList = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
@@ -170,7 +227,7 @@ export const PartsList = styled.div`
   }
 `
 
-export const PartsInfo = styled.tr`
+export const DocumentsInfo = styled.tr`
   border-bottom: 1px solid #f1f1f1;
   text-align: center;
 

@@ -93,7 +93,6 @@ export const ButtonView = styled.div`
     border-radius: 10px;
     background: #43b162;
     border-radius: 10px;
-    transform: rotate(0.01deg);
     font-family: Roboto;
     color: #fff;
     font-weight: 400;

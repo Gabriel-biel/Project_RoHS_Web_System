@@ -5,7 +5,7 @@ import { FiPlusCircle, FiArrowLeft } from 'react-icons/fi'
 import logo from '../../assets/rohs.png'
 import salcompRed from '../../assets/logo.png'
 
-import Modal from '../../components/ModalDocuments'
+import Modal from '../../components/Modal/PartCode'
 
 import {
   Grid,

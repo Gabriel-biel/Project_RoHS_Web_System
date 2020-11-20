@@ -1,22 +1,38 @@
 import styled from 'styled-components'
 
 export const Grid = styled.div`
-  display: grid;
+  display: flex;
+  width: 100%;
+  height: 100%;
 
-  grid-template-columns: 300px auto;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 
-  grid-template-areas: 'SB MN';
-
-  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
 `
 export const Main = styled.div`
-  grid-area: MN;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  width: 90%;
+  height: 90%;
+  background: #c4c4c4;
+  position: absolute;
+
+  border-radius: 20px;
+
+  span {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Roboto;
+
+    margin: 30px 0 40px 0;
+  }
 
   header {
-    width: 100%;
+    width: 90%;
     height: 50px;
     background: #fff;
 
@@ -25,17 +41,11 @@ export const Main = styled.div`
     justify-content: center;
     padding: 0 24px;
   }
-
-  span {
-    font-size: 21px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    text-align: center;
-  }
 `
 
 export const Form = styled.form`
   width: 568px;
+  height: 80%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -50,7 +60,7 @@ export const Form = styled.form`
     text-align: center;
     height: 60px;
     margin-top: 5px;
-    border-radius: 20px;
+    border-radius: 5px;
     background: #fff;
     margin-bottom: 10px;
 
@@ -82,23 +92,12 @@ export const Form = styled.form`
         background: rgba(46, 245, 13, 0.2);
       }
     }
-    a {
-      width: 200px;
-      display: flex;
-      height: 40px;
-      justify-content: center;
-      align-items: center;
 
-      border-radius: 10px;
-      margin: 5px;
-
-      background: #43b162;
-      color: #fff;
-      font-weight: 600;
-
+    button.cancel {
+      background: #ed6262;
       transition: background-color 0.2s;
       &:hover {
-        background: rgba(46, 245, 13, 0.2);
+        background: rgba(237, 98, 98, 0.51);
       }
     }
   }

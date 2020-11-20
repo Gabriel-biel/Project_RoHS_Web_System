@@ -90,141 +90,14 @@ const PartsManagement: React.FC = () => {
                   </Link>
                 </td>
               </PartsInfo>
-
-              <PartsInfo>
-                <td>
-                  <input type="text" placeholder="Paper" />
-                </td>
-                <td>
-                  <select name="cars" id="cars">
-                    <option value="Select">Select</option>
-                    <option value="First option">First Option</option>
-                    <option value="saab">Secund Option</option>
-                    <option value="opel">Three Option</option>
-                    <option value="audi">Four Opion</option>
-                  </select>
-                </td>
-                <td></td>
-                <td></td>
-                <td>Upload</td>
-                <td>
-                  <input type="date" />
-                </td>
-                <td>
-                  <Link to="">
-                    <FiPlusCircle size={28} color="#43B162" />
-                  </Link>
-                </td>
-              </PartsInfo>
-
-              <PartsInfo>
-                <td>
-                  <input type="text" placeholder="Paper" />
-                </td>
-                <td>
-                  <select name="cars" id="cars">
-                    <option value="Select">Select</option>
-                    <option value="First option">First Option</option>
-                    <option value="saab">Secund Option</option>
-                    <option value="opel">Three Option</option>
-                    <option value="audi">Four Opion</option>
-                  </select>
-                </td>
-                <td></td>
-                <td></td>
-                <td>Upload</td>
-                <td>
-                  <input type="date" />
-                </td>
-                <td>
-                  <Link to="">
-                    <FiPlusCircle size={28} color="#43B162" />
-                  </Link>
-                </td>
-              </PartsInfo>
-
-              <PartsInfo>
-                <td>
-                  <input type="text" placeholder="Paper" />
-                </td>
-                <td>
-                  <select name="cars" id="cars">
-                    <option value="Select">Select</option>
-                    <option value="First option">First Option</option>
-                    <option value="saab">Secund Option</option>
-                    <option value="opel">Three Option</option>
-                    <option value="audi">Four Opion</option>
-                  </select>
-                </td>
-                <td>Upload</td>
-                <td>Upload</td>
-                <td>Upload</td>
-                <td>
-                  <input type="date" />
-                </td>
-                <td>
-                  <Link to="">
-                    <FiPlusCircle size={28} color="#43B162" />
-                  </Link>
-                </td>
-              </PartsInfo>
-
-              <PartsInfo>
-                <td>
-                  <input type="text" placeholder="Paper" />
-                </td>
-                <td>
-                  <select name="cars" id="cars">
-                    <option value="Select">Select</option>
-                    <option value="First option">First Option</option>
-                    <option value="saab">Secund Option</option>
-                    <option value="opel">Three Option</option>
-                    <option value="audi">Four Opion</option>
-                  </select>
-                </td>
-                <td></td>
-                <td></td>
-                <td>Upload</td>
-                <td>
-                  <input type="date" />
-                </td>
-                <td>
-                  <Link to="">
-                    <FiPlusCircle size={28} color="#43B162" />
-                  </Link>
-                </td>
-              </PartsInfo>
-
-              <PartsInfo>
-                <td>
-                  <input type="text" placeholder="Paper" />
-                </td>
-                <td>
-                  <select name="cars" id="cars">
-                    <option value="Select">Select</option>
-                    <option value="First option">First Option</option>
-                    <option value="saab">Secund Option</option>
-                    <option value="opel">Three Option</option>
-                    <option value="audi">Four Opion</option>
-                  </select>
-                </td>
-                <td></td>
-                <td></td>
-                <td>Upload</td>
-                <td>
-                  <input type="date" />
-                </td>
-                <td>
-                  <Link to="">
-                    <FiPlusCircle size={28} color="#43B162" />
-                  </Link>
-                </td>
-              </PartsInfo>
             </tbody>
           </table>
         </PartsList>
         <ButtonSubmit>
           <button>Submit</button>
+          <Link to="/parts">
+            <button className="cancel">Cancel</button>
+          </Link>
         </ButtonSubmit>
         <LogoMainFooter>
           <img src={salcompRed} alt="" />

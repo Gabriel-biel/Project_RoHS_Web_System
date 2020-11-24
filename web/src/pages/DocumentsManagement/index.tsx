@@ -94,7 +94,7 @@ const PartsManagement: React.FC = () => {
           </table>
         </PartsList>
         <ButtonSubmit>
-          <button>Submit</button>
+          <button type="submit">Submit</button>
           <Link to="/parts">
             <button className="cancel">Cancel</button>
           </Link>

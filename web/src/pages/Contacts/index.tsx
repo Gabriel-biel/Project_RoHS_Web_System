@@ -20,7 +20,7 @@ import {
 } from './styles'
 
 const Contacts: React.FC = () => {
-  const [isNewContact, setIsNewContact] = useState(true)
+  const [isNewContact, setIsNewContact] = useState(false)
   return (
     <Grid>
       {isNewContact ? (

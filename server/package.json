@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.8",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "eslint-config-standard": "^15.0.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-node": "11.1.0",

@@ -1,8 +1,17 @@
-import React, { FormEvent, useCallback, useState } from 'react'
+import React, { useCallback, useRef } from 'react'
+import * as Yup from 'yup'
 import { useHistory } from 'react-router-dom'
+
+import { FormHandles } from '@unform/core'
+
+import { useToast } from '../../hooks/toast'
+import { useAuth } from '../../hooks/auth'
 
 import logoRohs from '../../assets/rohs.png'
 import worldImg from '../../assets/world.png'
+
+import Button from '../../components/Button'
+import Input from '../../components/Input'
 
 import {
   Container,
@@ -11,20 +20,60 @@ import {
   FormContainer,
   Footer
 } from './styles'
+import getValidationErrors from '../../utils/getValidationErrors'
+
+interface ISignInFormData {
+  identifier: string
+  password: string
+}
 
 const SignIn: React.FC = () => {
-  const [id, setId] = useState<string>('')
-  const [password, setPassword] = useState<string>('')
+  const formRef = useRef<FormHandles>(null)
 
   const history = useHistory()
 
-  const handleSubmit = useCallback(
-    (event: FormEvent) => {
-      event.preventDefault()
+  const { addToast } = useToast()
+  const { signIn, provider } = useAuth()
 
-      history.push('/dashboard')
+  console.log(provider)
+
+  const handleSubmit = useCallback(
+    async (data: ISignInFormData) => {
+      try {
+        formRef.current?.setErrors({})
+
+        const schema = Yup.object().shape({
+          identifier: Yup.string().required('ID obrigatório'),
+          password: Yup.string().required('Senha obrigatória')
+        })
+
+        await schema.validate(data, {
+          abortEarly: false
+        })
+
+        await signIn({
+          identifier: data.identifier,
+          password: data.password
+        })
+
+        history.push('/dashboard')
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err)
+
+          formRef.current?.setErrors(errors)
+
+          return
+        }
+
+        addToast({
+          type: 'error',
+          title: 'Erro na autenticação',
+          description: 'Ocorreu um erro ao fazer login, cheque as credenciais'
+        })
+      }
     },
-    [history]
+    [addToast, signIn, history]
   )
 
   return (
@@ -32,27 +81,20 @@ const SignIn: React.FC = () => {
       <LoginContainer>
         <img src={logoRohs} alt="Rohs" />
 
-        <FormContainer onSubmit={handleSubmit}>
+        <FormContainer ref={formRef} onSubmit={data => handleSubmit(data)}>
           <h1>Faça seu login</h1>
 
           <label>ID</label>
-          <input
-            placeholder="Informe sua ID"
-            value={id}
-            onChange={e => {
-              setId(e.target.value)
-            }}
-          />
+          <Input name="identifier" placeholder="Informe sua ID" />
 
           <label>Senha</label>
-          <input
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            placeholder="Informe sua senha"
+          <Input
+            name="password"
             type="password"
+            placeholder="Informe sua senha"
           />
 
-          <button type="submit">Entrar</button>
+          <Button type="submit">Entrar</Button>
         </FormContainer>
 
         <Footer>

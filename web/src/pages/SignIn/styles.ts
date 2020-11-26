@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Form } from '@unform/web'
 
 export const Container = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ export const LoginContainer = styled.div`
   }
 `
 
-export const FormContainer = styled.form`
+export const FormContainer = styled(Form)`
   min-width: 400px;
   h1 {
     color: #505152;
@@ -32,28 +33,6 @@ export const FormContainer = styled.form`
     display: block;
     margin-bottom: 8px;
     color: #92d550;
-  }
-
-  input {
-    width: 100%;
-    height: 56px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    padding: 0 24px;
-  }
-
-  button {
-    width: 100%;
-    margin: 12px 0;
-    height: 56px;
-    background: #92d550;
-    border-radius: 6px;
-    color: #fff;
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 `
 

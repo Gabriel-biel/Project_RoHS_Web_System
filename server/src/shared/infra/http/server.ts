@@ -1,6 +1,7 @@
 import 'reflect-metadata'
 
 import express, { Request, Response, NextFunction } from 'express'
+import cors from 'cors'
 import 'express-async-errors'
 import routes from './routes'
 import AppError from '@shared/errors/AppError'
@@ -9,6 +10,7 @@ import '@shared/infra/typeorm/connection'
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 
 app.use(routes)

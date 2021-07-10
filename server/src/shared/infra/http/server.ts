@@ -1,19 +1,23 @@
 import 'reflect-metadata'
-
-import express, { Request, Response, NextFunction } from 'express'
-import cors from 'cors'
+import express, { NextFunction, Request, Response } from 'express'
 import 'express-async-errors'
-import routes from './routes'
-import AppError from '@shared/errors/AppError'
+import swaggerUi from 'swagger-ui-express'
 
-import '@shared/infra/typeorm/connection'
+import { AppError } from '@errors/AppError'
+
+import swaggerFile from '../../../../swagger.json'
+import { appRoutes } from './routes'
+
+import '@shared/infra/typeorm'
+import '@shared/containers'
 
 const app = express()
 
-app.use(cors())
 app.use(express.json())
 
-app.use(routes)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+app.use(appRoutes)
 
 app.use(
   (err: Error, request: Request, response: Response, _next: NextFunction) => {
@@ -24,11 +28,11 @@ app.use(
       })
     }
 
-    console.error(err)
+    console.log(err)
 
     return response.status(500).json({
       status: 'error',
-      message: 'Internal Server Error'
+      message: 'Internal server error'
     })
   }
 )

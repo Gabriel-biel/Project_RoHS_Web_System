@@ -1,13 +1,15 @@
 {
-  "type": "sqlite",
-  "database": "./src/shared/infra/typeorm/database.sqlite",
-  "migrations": [
-    "./src/shared/infra/typeorm/migrations/*.ts"
-  ],
-  "entities": [
-    "./src/modules/**/infra/typeorm/entities/*.ts"
-  ],
+  "type": "postgres",
+  "port": 5432,
+  "host": "localhost",
+  "username": "rohs",
+  "password": "samgabvin",
+  "database": "rohs_database",
+  "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
   "cli": {
     "migrationsDir": "./src/shared/infra/typeorm/migrations"
-  }
+  },
+  "entities": [
+    "./src/modules/**/infra/typeorm/entities/*.ts"
+  ]
 }

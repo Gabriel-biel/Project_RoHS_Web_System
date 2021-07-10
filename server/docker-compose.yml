@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  rohs_database_container:
+    image: postgres
+    container_name: rohs_database_container
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=rohs
+      - POSTGRES_PASSWORD=samgabvin
+      - POSTGRES_DB=rohs_database
+    volumes:
+      - pgdata:/data/postgres
+  app:
+    build: .
+    container_name: rohs_app
+    ports:
+      - 3333:3333
+    volumes:
+      - .:/usr/app
+    links:
+      - rohs_database_container
+    depends_on:
+      - rohs_database_container
+
+
+volumes:
+  pgdata:
+    driver: local

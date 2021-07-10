@@ -1,0 +1,14 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RoHS Documentation",
+    "description": "This is an API RoHS",
+    "version": "1.0.0",
+    "contact": {
+      "email": "vinniemalafaia@hotmail.com"
+    }
+  },
+  "paths": {
+
+  }
+}

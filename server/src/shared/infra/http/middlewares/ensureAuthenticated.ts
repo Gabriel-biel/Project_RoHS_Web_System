@@ -32,7 +32,7 @@ export async function ensureAuthenticated(
     const admin = await adminsRepository.findById(id)
 
     if (!admin) {
-      throw new AppError('Admin does not exists!')
+      throw new AppError('Admin does not exists!', 404)
     }
 
     return next()

@@ -30,11 +30,11 @@ export class AuthenticateAdminUseCase {
     const admin = await this.adminsRepository.findAdmin()
 
     if (!admin) {
-      throw new AppError('There is no admin registered!')
+      throw new AppError('There is no admin registered!', 404)
     }
 
     if (admin.admin_id !== admin_id) {
-      throw new AppError('Email or password incorrect!')
+      throw new AppError('Email or password incorrect!', 401)
     }
 
     const passwordMatch = await this.hashProvider.compareHash(
@@ -43,7 +43,7 @@ export class AuthenticateAdminUseCase {
     )
 
     if (!passwordMatch) {
-      throw new AppError('Email or password incorrect!')
+      throw new AppError('Email or password incorrect!', 401)
     }
 
     const { secret, expiresIn } = authConfig.jwt

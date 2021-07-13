@@ -21,7 +21,7 @@ export class AdminsRepositoryInMemory implements IAdminsRepository {
     this.admins.push(admin)
   }
 
-  async findAdmin(): Promise<Admin> {
+  async findAdmin(): Promise<Admin | undefined> {
     return this.admins[0]
   }
 }

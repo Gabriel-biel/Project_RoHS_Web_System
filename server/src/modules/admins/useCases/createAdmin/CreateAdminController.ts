@@ -9,6 +9,6 @@ export class CreateAdminController {
 
     const admin = await createAdmin.execute()
 
-    return response.json(admin)
+    return response.status(201).json(admin)
   }
 }

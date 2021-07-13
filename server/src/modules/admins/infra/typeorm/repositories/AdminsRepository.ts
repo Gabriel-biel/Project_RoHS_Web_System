@@ -20,8 +20,9 @@ export class AdminsRepository implements IAdminsRepository {
 
     await this.repository.save(admin)
   }
-  findAdmin(): Promise<Admin | undefined> {
-    const admins = this.repository.find()
+
+  async findAdmin(): Promise<Admin | undefined> {
+    const admins = await this.repository.find()
 
     return admins[0]
   }

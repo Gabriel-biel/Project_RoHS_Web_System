@@ -9,6 +9,54 @@
     }
   },
   "paths": {
-
+    "/admins": {
+      "post": {
+        "tags": ["Admin"],
+        "summary": "Create an admin",
+        "description": "Create a new client admin",
+        "responses": {
+          "201": {
+            "description": "Admin created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "admin_id": {
+                      "type": "number",
+                      "example": 123456
+                    },
+                    "password": {
+                      "type": "string",
+                      "example": "wsderd23432"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Admin already created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "error"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "This admin is already created!"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

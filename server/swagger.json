@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.0.3",
   "info": {
     "title": "RoHS Documentation",
     "description": "This is an API RoHS",
@@ -8,6 +8,12 @@
       "email": "vinniemalafaia@hotmail.com"
     }
   },
+  "servers": [
+    {
+      "url": "http://localhost:3333",
+      "description": "Development server"
+    }
+  ],
   "paths": {
     "/admins": {
       "post": {
@@ -54,6 +60,41 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/admins/sessions": {
+      "post": {
+        "tags": ["Admin"],
+        "summary": "Authenticate Admin",
+        "description": "Create a new client admin session",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "admin_id": {
+                    "type": "number"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Authentication success"
+          },
+          "404": {
+            "description": "Admin not founded"
+          },
+          "401": {
+            "description": "Email or password incorrect"
           }
         }
       }

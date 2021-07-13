@@ -26,4 +26,8 @@ export class AdminsRepository implements IAdminsRepository {
 
     return admins[0]
   }
+
+  async findById(id: string): Promise<Admin | undefined> {
+    return await this.repository.findOne(id)
+  }
 }

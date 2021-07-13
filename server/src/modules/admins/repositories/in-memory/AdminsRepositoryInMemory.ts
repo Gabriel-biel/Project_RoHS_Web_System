@@ -24,4 +24,8 @@ export class AdminsRepositoryInMemory implements IAdminsRepository {
   async findAdmin(): Promise<Admin | undefined> {
     return this.admins[0]
   }
+
+  async findById(id: string): Promise<Admin | undefined> {
+    return this.admins.find(admin => admin.id === id)
+  }
 }

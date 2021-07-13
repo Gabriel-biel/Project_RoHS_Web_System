@@ -35,6 +35,10 @@ export async function ensureAuthenticated(
       throw new AppError('Admin does not exists!', 404)
     }
 
+    request.admin = {
+      id
+    }
+
     return next()
   } catch {
     throw new AppError('Invalid token!', 401)
